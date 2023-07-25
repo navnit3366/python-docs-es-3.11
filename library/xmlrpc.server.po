@@ -1,0 +1,493 @@
+# Copyright (C) 2001-2020, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 19:47+0200\n"
+"PO-Revision-Date: 2022-11-11 17:05-0300\n"
+"Last-Translator: Sofía Denner <sofi.denner@gmail.com>\n"
+"Language-Team: python-doc-es\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.2\n"
+
+#: ../Doc/library/xmlrpc.server.rst:2
+msgid ":mod:`xmlrpc.server` --- Basic XML-RPC servers"
+msgstr ":mod:`xmlrpc.server` --- Servidores básicos XML-RPC"
+
+#: ../Doc/library/xmlrpc.server.rst:10
+msgid "**Source code:** :source:`Lib/xmlrpc/server.py`"
+msgstr "**Código fuente:** :source:`Lib/xmlrpc/server.py`"
+
+#: ../Doc/library/xmlrpc.server.rst:14
+msgid ""
+"The :mod:`xmlrpc.server` module provides a basic server framework for XML-"
+"RPC servers written in Python.  Servers can either be free standing, using :"
+"class:`SimpleXMLRPCServer`, or embedded in a CGI environment, using :class:"
+"`CGIXMLRPCRequestHandler`."
+msgstr ""
+"El módulo :mod:`xmlrpc.server` proporciona un marco de servidor básico para "
+"servidores XML-RPC escritos en Python. Los servidores pueden ser "
+"independientes, utilizando :class:`SimpleXMLRPCServer`, o integrados en un "
+"entorno CGI, utilizando :class:`CGIXMLRPCRequestHandler`."
+
+#: ../Doc/library/xmlrpc.server.rst:22
+msgid ""
+"The :mod:`xmlrpc.server` module is not secure against maliciously "
+"constructed data.  If you need to parse untrusted or unauthenticated data "
+"see :ref:`xml-vulnerabilities`."
+msgstr ""
+"El módulo :mod:`xmlrpc.server` no es seguro contra datos construidos "
+"maliciosamente. Si necesita analizar sintácticamente datos no confiables o "
+"no autentificados, consulte :ref:`xml-vulnerabilities`."
+
+#, fuzzy
+msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgstr ":ref:`Disponibilidad <availability>`: no Emscripten, no WASI."
+
+#: ../Doc/library/cpython/Doc/includes/wasm-notavail.rst:5
+msgid ""
+"This module does not work or is not available on WebAssembly platforms "
+"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
+"more information."
+msgstr ""
+"Este módulo no funciona o no está disponible en plataformas WebAssembly "
+"``wasm32-emscripten`` y ``wasm32-wasi``. Ver :ref:`wasm-availability` para "
+"más información."
+
+#: ../Doc/library/xmlrpc.server.rst:32
+msgid ""
+"Create a new server instance.  This class provides methods for registration "
+"of functions that can be called by the XML-RPC protocol.  The "
+"*requestHandler* parameter should be a factory for request handler "
+"instances; it defaults to :class:`SimpleXMLRPCRequestHandler`.  The *addr* "
+"and *requestHandler* parameters are passed to the :class:`socketserver."
+"TCPServer` constructor.  If *logRequests* is true (the default), requests "
+"will be logged; setting this parameter to false will turn off logging.   The "
+"*allow_none* and *encoding* parameters are passed on to :mod:`xmlrpc.client` "
+"and control the XML-RPC responses that will be returned from the server. The "
+"*bind_and_activate* parameter controls whether :meth:`server_bind` and :meth:"
+"`server_activate` are called immediately by the constructor; it defaults to "
+"true. Setting it to false allows code to manipulate the "
+"*allow_reuse_address* class variable before the address is bound. The "
+"*use_builtin_types* parameter is passed to the :func:`~xmlrpc.client.loads` "
+"function and controls which types are processed when date/times values or "
+"binary data are received; it defaults to false."
+msgstr ""
+"Crea una nueva instancia de servidor. Esta clase proporciona métodos para el "
+"registro de funciones que pueden ser llamados por el protocolo XML-RPC. El "
+"parámetro *requestHandler* debe ser un generador para las instancias del "
+"controlador de solicitudes; el valor predeterminado es :class:"
+"`SimpleXMLRPCRequestHandler`. Los parámetros *addr* y *requestHandler* se "
+"pasan al constructor :class:`socketserver. TCPServer`. Si *logRequests* es "
+"verdadero (valor predeterminado), se registrarán las solicitudes; establecer "
+"este parámetro como falso desactivará el registro. Los parámetros "
+"*allow_none* y *encoding* se pasan a :mod:`xmlrpc.client` y controlan las "
+"respuestas XML-RPC que se devolverán desde el servidor. El parámetro "
+"*bind_and_activate* controla si :meth:`server_bind` y :meth:"
+"`server_activate` son llamados inmediatamente por el constructor; por "
+"defecto es verdadero. Establecerlo como false permite que el código manipule "
+"la variable de clase *allow_reuse_address* antes de enlazar la dirección. El "
+"parámetro *use_builtin_types* se pasa a la función :func:`~xmlrpc.client."
+"loads` y controla qué tipos se procesan cuando se reciben valores de fecha y "
+"hora o datos binarios; el valor predeterminado es false."
+
+#: ../Doc/library/xmlrpc.server.rst:48 ../Doc/library/xmlrpc.server.rst:62
+#: ../Doc/library/xmlrpc.server.rst:374
+msgid "The *use_builtin_types* flag was added."
+msgstr "Se ha añadido el indicador *use_builtin_types*."
+
+#: ../Doc/library/xmlrpc.server.rst:55
+msgid ""
+"Create a new instance to handle XML-RPC requests in a CGI environment.  The "
+"*allow_none* and *encoding* parameters are passed on to :mod:`xmlrpc.client` "
+"and control the XML-RPC responses that will be returned from the server. The "
+"*use_builtin_types* parameter is passed to the :func:`~xmlrpc.client.loads` "
+"function and controls which types are processed when date/times values or "
+"binary data are received; it defaults to false."
+msgstr ""
+"Crea una nueva instancia para gestionar solicitudes XML-RPC en un entorno "
+"CGI.  Los parámetros *allow_none* y *encoding* se pasan a :mod:`xmlrpc."
+"client` y controlan las respuestas XML-RPC que se devolverán desde el "
+"servidor. El parámetro *use_builtin_types* se pasa a la función :func:"
+"`~xmlrpc.client.loads` y controla qué tipos se procesan cuando se reciben "
+"valores de fecha y hora o datos binarios; el valor predeterminado es falso."
+
+#: ../Doc/library/xmlrpc.server.rst:68
+msgid ""
+"Create a new request handler instance.  This request handler supports "
+"``POST`` requests and modifies logging so that the *logRequests* parameter "
+"to the :class:`SimpleXMLRPCServer` constructor parameter is honored."
+msgstr ""
+"Crea una nueva instancia del controlador de solicitudes.  Este controlador "
+"de solicitudes admite solicitudes ``POST`` y modifica el registro para que "
+"se respete el parámetro *logRequests* del parámetro constructor :class:"
+"`SimpleXMLRPCServer`."
+
+#: ../Doc/library/xmlrpc.server.rst:76
+msgid "SimpleXMLRPCServer Objects"
+msgstr "Objetos SimpleXMLRPCServer"
+
+#: ../Doc/library/xmlrpc.server.rst:78
+msgid ""
+"The :class:`SimpleXMLRPCServer` class is based on :class:`socketserver."
+"TCPServer` and provides a means of creating simple, stand alone XML-RPC "
+"servers."
+msgstr ""
+"La clase :class:`SimpleXMLRPCServer` se basa en :class:`socketserver."
+"TCPServer` y proporciona un medio para crear servidores XML-RPC simples e "
+"independientes."
+
+#: ../Doc/library/xmlrpc.server.rst:85 ../Doc/library/xmlrpc.server.rst:299
+msgid ""
+"Register a function that can respond to XML-RPC requests.  If *name* is "
+"given, it will be the method name associated with *function*, otherwise "
+"``function.__name__`` will be used.  *name* is a string, and may contain "
+"characters not legal in Python identifiers, including the period character."
+msgstr ""
+"Registra una función que pueda responder a solicitudes XML-RPC. Si se "
+"proporciona *name*, este será el nombre del método asociado con *function*, "
+"en otro caso se utilizará ``function.__name__``. *name* es una cadena de "
+"texto, y puede contener caracteres no permitidos en los identificadores de "
+"Python, incluido el caracter de punto."
+
+#: ../Doc/library/xmlrpc.server.rst:90 ../Doc/library/xmlrpc.server.rst:304
+msgid ""
+"This method can also be used as a decorator.  When used as a decorator, "
+"*name* can only be given as a keyword argument to register *function* under "
+"*name*.  If no *name* is given, ``function.__name__`` will be used."
+msgstr ""
+"Este método también se puede utilizar como decorador. Cuando se usa como "
+"decorador, *name* solo se puede dar como un argumento de palabra clave para "
+"registrar *function* bajo *nombre*. Si no se proporciona *name*, se usará "
+"``function.__name__``."
+
+#: ../Doc/library/xmlrpc.server.rst:94 ../Doc/library/xmlrpc.server.rst:308
+msgid ":meth:`register_function` can be used as a decorator."
+msgstr ":meth:`register_function` puede ser usado como decorador."
+
+#: ../Doc/library/xmlrpc.server.rst:100
+msgid ""
+"Register an object which is used to expose method names which have not been "
+"registered using :meth:`register_function`.  If *instance* contains a :meth:"
+"`_dispatch` method, it is called with the requested method name and the "
+"parameters from the request.  Its API is ``def _dispatch(self, method, "
+"params)`` (note that *params* does not represent a variable argument list).  "
+"If it calls an underlying function to perform its task, that function is "
+"called as ``func(*params)``, expanding the parameter list. The return value "
+"from :meth:`_dispatch` is returned to the client as the result.  If "
+"*instance* does not have a :meth:`_dispatch` method, it is searched for an "
+"attribute matching the name of the requested method."
+msgstr ""
+"Registre un objeto que se usa para exponer nombre de métodos que no se han "
+"registrado usando :meth:`register_function`. Si *instance* contiene un "
+"método :meth:`_dispatch`, este será llamado con el nombre del método "
+"solicitado y los parámetros de la solicitud. Su API es ``def _dispatch(self, "
+"method, params)`` (tenga en cuenta que *params* no representa una lista de "
+"argumentos variables). Si se invoca a una función subyacente para realizar "
+"su tarea, esa función es llamada como ``func(*params)``, expandiendo la "
+"lista de parámetros. El valor de retorno de :meth:`_dispatch` se retorna al "
+"cliente como resultado. Si *instance* no tiene un método :meth:`_dispatch`, "
+"se busca un atributo que coincida con el nombre del método solicitado."
+
+#: ../Doc/library/xmlrpc.server.rst:111
+msgid ""
+"If the optional *allow_dotted_names* argument is true and the instance does "
+"not have a :meth:`_dispatch` method, then if the requested method name "
+"contains periods, each component of the method name is searched for "
+"individually, with the effect that a simple hierarchical search is "
+"performed.  The value found from this search is then called with the "
+"parameters from the request, and the return value is passed back to the "
+"client."
+msgstr ""
+"Si el argumento opcional *allow_dotted_names* es verdadero y la instancia no "
+"tiene un método :meth:`_dispatch`, entonces si el nombre solicitado contiene "
+"puntos, cada componente del nombre del método se busca individualmente, con "
+"el efecto con el efecto que produce una búsqueda jerárquica simple. El valor "
+"encontrado en esta búsqueda es entonces llamado con los parámetros de la "
+"solicitud y el valor de retorno se devuelve al cliente."
+
+#: ../Doc/library/xmlrpc.server.rst:120
+msgid ""
+"Enabling the *allow_dotted_names* option allows intruders to access your "
+"module's global variables and may allow intruders to execute arbitrary code "
+"on your machine.  Only use this option on a secure, closed network."
+msgstr ""
+"Habilitando la opción *allow_dotted_names* permite a los intrusos acceder a "
+"las variables globales de su módulo y puede permitir que los intrusos "
+"ejecuten código arbitrario en su máquina. Utilice esta opción únicamente en "
+"una red cerrada y segura."
+
+#: ../Doc/library/xmlrpc.server.rst:127
+msgid ""
+"Registers the XML-RPC introspection functions ``system.listMethods``, "
+"``system.methodHelp`` and ``system.methodSignature``."
+msgstr ""
+"Registre las funciones de introspección XML-RPC ``system.listMethods``, "
+"``system.methodHelp`` y ``system.methodSignature``."
+
+#: ../Doc/library/xmlrpc.server.rst:133
+msgid "Registers the XML-RPC multicall function system.multicall."
+msgstr "Registre la función de llamada múltiple XML-RPC system.multicall."
+
+#: ../Doc/library/xmlrpc.server.rst:138
+msgid ""
+"An attribute value that must be a tuple listing valid path portions of the "
+"URL for receiving XML-RPC requests.  Requests posted to other paths will "
+"result in a 404 \"no such page\" HTTP error.  If this tuple is empty, all "
+"paths will be considered valid. The default value is ``('/', '/RPC2')``."
+msgstr ""
+"Un valor de atributo que debe ser una tupla que enumere porciones de rota "
+"válidas de la URL para recibir solicitudes XML-RPC. Las solicitudes "
+"publicadas en otras rutas darán como resultado un error HTTP 404 \"no existe "
+"tal página\". Si esta tupla está vacía, todas las rutas se considerarán "
+"válidas. El valor predeterminado es ``('/', '/RPC2')``."
+
+#: ../Doc/library/xmlrpc.server.rst:147
+msgid "SimpleXMLRPCServer Example"
+msgstr "Ejemplo de SimpleXMLRPCServer"
+
+#: ../Doc/library/xmlrpc.server.rst:148
+msgid "Server code::"
+msgstr "Código del servidor::"
+
+#: ../Doc/library/xmlrpc.server.rst:182
+msgid ""
+"The following client code will call the methods made available by the "
+"preceding server::"
+msgstr ""
+"El siguiente código de cliente llamará a los métodos disponibles por el "
+"servidor anterior::"
+
+#: ../Doc/library/xmlrpc.server.rst:195
+msgid ""
+":meth:`register_function` can also be used as a decorator. The previous "
+"server example can register functions in a decorator way::"
+msgstr ""
+":meth:`register_function` también se puede utilizar como decorador. El "
+"ejemplo de servidor anterior puede registrar funciones a modo de decorador::"
+
+#: ../Doc/library/xmlrpc.server.rst:226
+msgid ""
+"The following example included in the :file:`Lib/xmlrpc/server.py` module "
+"shows a server allowing dotted names and registering a multicall function."
+msgstr ""
+"El siguiente ejemplo incluido en el módulo :file:`Lib/xmlrpc/server.py` "
+"muestra un servidor que permite nombres con puntos y registra una función de "
+"llamada múltiple."
+
+#: ../Doc/library/xmlrpc.server.rst:231
+msgid ""
+"Enabling the *allow_dotted_names* option allows intruders to access your "
+"module's global variables and may allow intruders to execute arbitrary code "
+"on your machine.  Only use this example only within a secure, closed network."
+msgstr ""
+"Habilitar la opción *allow_dotted_names* permite a los intrusos acceder a "
+"las variables globales de su módulo y puede permitir que los intrusos "
+"ejecuten código arbitrario en su máquina. Utilice este ejemplo únicamente "
+"dentro de una red cerrada y segura."
+
+#: ../Doc/library/xmlrpc.server.rst:260
+msgid "This ExampleService demo can be invoked from the command line::"
+msgstr ""
+"Esta demostración de ExampleService se puede invocar desde la línea de "
+"comando::"
+
+#: ../Doc/library/xmlrpc.server.rst:265
+msgid ""
+"The client that interacts with the above server is included in ``Lib/xmlrpc/"
+"client.py``::"
+msgstr ""
+"El cliente que interactúa con el servidor anterior está incluido en `Lib/"
+"xmlrpc/client.py`::"
+
+#: ../Doc/library/xmlrpc.server.rst:285
+msgid ""
+"This client which interacts with the demo XMLRPC server can be invoked as::"
+msgstr ""
+"Este cliente que interactúa con el servidor XMLRPC de demostración se puede "
+"invocar como::"
+
+#: ../Doc/library/xmlrpc.server.rst:291
+msgid "CGIXMLRPCRequestHandler"
+msgstr "CGIXMLRPCRequestHandler"
+
+#: ../Doc/library/xmlrpc.server.rst:293
+msgid ""
+"The :class:`CGIXMLRPCRequestHandler` class can be used to handle XML-RPC "
+"requests sent to Python CGI scripts."
+msgstr ""
+"La clase :class:`CGIXMLRPCRequestHandler` se puede usar para manejar "
+"solicitudes XML-RPC enviadas a scripts Python CGI."
+
+#: ../Doc/library/xmlrpc.server.rst:314
+msgid ""
+"Register an object which is used to expose method names  which have not been "
+"registered using :meth:`register_function`. If  instance contains a :meth:"
+"`_dispatch` method, it is called with the  requested method name and the "
+"parameters from the  request; the return value is returned to the client as "
+"the result. If instance does not have a :meth:`_dispatch` method, it is "
+"searched for an attribute matching the name of the requested method; if  the "
+"requested method name contains periods, each  component of the method name "
+"is searched for individually,  with the effect that a simple hierarchical "
+"search is performed. The value found from this search is then called with "
+"the  parameters from the request, and the return value is passed  back to "
+"the client."
+msgstr ""
+"Registra un objeto que se usa para exponer nombres de métodos que no se han "
+"registrado usando :meth:`register_function`. Si la instancia contiene un "
+"método :meth:`_dispatch`, se llama con el nombre del método solicitado y los "
+"parámetros de la solicitud; el valor de retorno se devuelve al cliente como "
+"resultado. Si la instancia no tiene un método :meth:`_dispatch`, se busca un "
+"atributo que coincida con el nombre del método solicitado; si el nombre del "
+"método contiene puntos, cada componente del nombre del método se busca "
+"individualmente, con el efecto con el efecto que produce una búsqueda "
+"jerárquica simple. El valor encontrado en esta búsqueda es entonces llamado "
+"con los parámetros de la solicitud y el valor de retorno se devuelve al "
+"cliente."
+
+#: ../Doc/library/xmlrpc.server.rst:328
+msgid ""
+"Register the XML-RPC introspection functions  ``system.listMethods``, "
+"``system.methodHelp`` and  ``system.methodSignature``."
+msgstr ""
+"Registra las funciones de introspección ``system.listMethods``, ``system."
+"methodHelp`` y ``system.methodSignature``."
+
+#: ../Doc/library/xmlrpc.server.rst:334
+msgid "Register the XML-RPC multicall function ``system.multicall``."
+msgstr "Registra la función de llamada múltiple XML-RPC ``system.multicall``."
+
+#: ../Doc/library/xmlrpc.server.rst:339
+msgid ""
+"Handle an XML-RPC request. If *request_text* is given, it should be the POST "
+"data provided by the HTTP server,  otherwise the contents of stdin will be "
+"used."
+msgstr ""
+"Maneja una solicitud XML-RPC. Si se proporciona *request_text*, deberían ser "
+"los datos POST proporcionados por el servidor HTTP, de lo contrario se "
+"utilizará el contenido de stdin."
+
+#: ../Doc/library/xmlrpc.server.rst:342
+msgid "Example::"
+msgstr "Ejemplo::"
+
+#: ../Doc/library/xmlrpc.server.rst:358
+msgid "Documenting XMLRPC server"
+msgstr "Documentando el servidor XMLRPC"
+
+#: ../Doc/library/xmlrpc.server.rst:360
+msgid ""
+"These classes extend the above classes to serve HTML documentation in "
+"response to HTTP GET requests.  Servers can either be free standing, using :"
+"class:`DocXMLRPCServer`, or embedded in a CGI environment, using :class:"
+"`DocCGIXMLRPCRequestHandler`."
+msgstr ""
+"Estas clases amplían las clases anteriores para proporcionar documentación "
+"HTML en respuesta a solicitudes HTTP GET. Los servidores pueden ser "
+"independientes, usando :class:`DocXMLRPCServer`, o integrados en un entorno "
+"CGI, usando :class:`DocCGIXMLRPCRequestHandler`."
+
+#: ../Doc/library/xmlrpc.server.rst:370
+msgid ""
+"Create a new server instance. All parameters have the same meaning as for :"
+"class:`SimpleXMLRPCServer`; *requestHandler* defaults to :class:"
+"`DocXMLRPCRequestHandler`."
+msgstr ""
+"Crea una nueva instancia de servidor. Todos los parámetros tienen el mismo "
+"significado que para :class:`SimpleXMLRPCServer`; *requestHandler* tiene "
+"como valor predeterminado :class:`DocXMLRPCRequestHandler`."
+
+#: ../Doc/library/xmlrpc.server.rst:380
+msgid "Create a new instance to handle XML-RPC requests in a CGI environment."
+msgstr ""
+"Crea una nueva instancia para manejar solicitudes XML-RPC en un entorno CGI."
+
+#: ../Doc/library/xmlrpc.server.rst:385
+msgid ""
+"Create a new request handler instance. This request handler supports XML-RPC "
+"POST requests, documentation GET requests, and modifies logging so that the "
+"*logRequests* parameter to the :class:`DocXMLRPCServer` constructor "
+"parameter is honored."
+msgstr ""
+"Crea una nueva instancia de controlador de solicitudes. Este controlador de "
+"solicitudes admite solicitudes XML-RPC POST, solicitudes GET de "
+"documentación y modifica el registro para que se respete el parámetro "
+"*logRequests* del parámetro constructor :class:`DocXMLRPCServer`."
+
+#: ../Doc/library/xmlrpc.server.rst:394
+msgid "DocXMLRPCServer Objects"
+msgstr "Objetos DocXMLRPCServer"
+
+#: ../Doc/library/xmlrpc.server.rst:396
+msgid ""
+"The :class:`DocXMLRPCServer` class is derived from :class:"
+"`SimpleXMLRPCServer` and provides a means of creating self-documenting, "
+"stand alone XML-RPC servers. HTTP POST requests are handled as XML-RPC "
+"method calls. HTTP GET requests are handled by generating pydoc-style HTML "
+"documentation. This allows a server to provide its own web-based "
+"documentation."
+msgstr ""
+"La clase :class:`DocXMLRPCServer` se deriva de :class:`SimpleXMLRPCServer` y "
+"proporciona un medio para crear servidores XML-RPC autónomos y "
+"autodocumentados. Las solicitudes HTTP POST se manejan como llamadas al "
+"método XML-RPC. Las solicitudes HTTP GET se manejan generando documentación "
+"HTML al estilo pydoc. Esto permite que un servidor proporcione su propia "
+"documentación basada en web."
+
+#: ../Doc/library/xmlrpc.server.rst:405 ../Doc/library/xmlrpc.server.rst:433
+msgid ""
+"Set the title used in the generated HTML documentation. This title will be "
+"used inside the HTML \"title\" element."
+msgstr ""
+"Establezca el título utilizado en la documentación HTML generada. Este "
+"título se utilizará dentro del elemento HTML \"title\"."
+
+#: ../Doc/library/xmlrpc.server.rst:411 ../Doc/library/xmlrpc.server.rst:439
+msgid ""
+"Set the name used in the generated HTML documentation. This name will appear "
+"at the top of the generated documentation inside a \"h1\" element."
+msgstr ""
+"Establezca el nombre utilizado en la documentación HTML generada. Este "
+"nombre aparecerá en la parte superior de la documentación generada dentro de "
+"un elemento \"h1\"."
+
+#: ../Doc/library/xmlrpc.server.rst:417 ../Doc/library/xmlrpc.server.rst:445
+msgid ""
+"Set the description used in the generated HTML documentation. This "
+"description will appear as a paragraph, below the server name, in the "
+"documentation."
+msgstr ""
+"Establezca la descripción utilizada en la documentación HTML generada. Esta "
+"descripción aparecerá como un párrafo, debajo del nombre del servidor, en la "
+"documentación."
+
+#: ../Doc/library/xmlrpc.server.rst:422
+msgid "DocCGIXMLRPCRequestHandler"
+msgstr "DocCGIXMLRPCRequestHandler"
+
+#: ../Doc/library/xmlrpc.server.rst:424
+msgid ""
+"The :class:`DocCGIXMLRPCRequestHandler` class is derived from :class:"
+"`CGIXMLRPCRequestHandler` and provides a means of creating self-documenting, "
+"XML-RPC CGI scripts. HTTP POST requests are handled as XML-RPC method calls. "
+"HTTP GET requests are handled by generating pydoc-style HTML documentation. "
+"This allows a server to provide its own web-based documentation."
+msgstr ""
+"La clase :class:`DocCGIXMLRPCRequestHandler` se deriva de :class:"
+"`CGIXMLRPCRequestHandler` y proporciona un medio para crear scripts CGI XML-"
+"RPC autodocumentados. Las solicitudes HTTP POST se manejan como llamadas al "
+"método XML-RPC. Las solicitudes HTTP GET se manejan generando documentación "
+"HTML al estilo pydoc. Esto permite que un servidor proporcione su propia "
+"documentación basada en web."

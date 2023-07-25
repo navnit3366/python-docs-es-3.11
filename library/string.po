@@ -1,0 +1,1531 @@
+# Copyright (C) 2001-2020, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to
+# get the list of volunteers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 19:47+0200\n"
+"PO-Revision-Date: 2023-03-17 19:35-0500\n"
+"Last-Translator: Adolfo Hristo David Roque Gámez <aroquega@gmail.com>\n"
+"Language-Team: python-doc-es\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: ../Doc/library/string.rst:2
+msgid ":mod:`string` --- Common string operations"
+msgstr ":mod:`string` --- Operaciones comunes de cadena de caracteres"
+
+#: ../Doc/library/string.rst:7
+msgid "**Source code:** :source:`Lib/string.py`"
+msgstr "**Source code:** :source:`Lib/string.py`"
+
+#: ../Doc/library/string.rst:14
+msgid ":ref:`textseq`"
+msgstr ":ref:`textseq`"
+
+#: ../Doc/library/string.rst:16
+msgid ":ref:`string-methods`"
+msgstr ":ref:`string-methods`"
+
+#: ../Doc/library/string.rst:19
+msgid "String constants"
+msgstr "Constantes de cadenas"
+
+#: ../Doc/library/string.rst:21
+msgid "The constants defined in this module are:"
+msgstr "Las constantes definidas en este módulo son:"
+
+#: ../Doc/library/string.rst:26
+msgid ""
+"The concatenation of the :const:`ascii_lowercase` and :const:"
+"`ascii_uppercase` constants described below.  This value is not locale-"
+"dependent."
+msgstr ""
+"La concatenación de las constantes abajo descriptas :const:`ascii_lowercase` "
+"y :const:`ascii_uppercase`.  Este valor es independiente de la configuración "
+"regional."
+
+#: ../Doc/library/string.rst:32
+msgid ""
+"The lowercase letters ``'abcdefghijklmnopqrstuvwxyz'``.  This value is not "
+"locale-dependent and will not change."
+msgstr ""
+"Las letras minúsculas ``'abcdefghijklmnopqrstuvwxyz'``.  Este valor es "
+"independiente de la configuración regional y no cambiará."
+
+#: ../Doc/library/string.rst:38
+msgid ""
+"The uppercase letters ``'ABCDEFGHIJKLMNOPQRSTUVWXYZ'``.  This value is not "
+"locale-dependent and will not change."
+msgstr ""
+"Las letras mayúsculas ``'ABCDEFGHIJKLMNOPQRSTUVWXYZ'``.  Este valor es "
+"independiente de la configuración regional y no cambiará."
+
+#: ../Doc/library/string.rst:44
+msgid "The string ``'0123456789'``."
+msgstr "La cadena ``'0123456789'``."
+
+#: ../Doc/library/string.rst:49
+msgid "The string ``'0123456789abcdefABCDEF'``."
+msgstr "La cadena ``'0123456789abcdefABCDEF'``."
+
+#: ../Doc/library/string.rst:54
+msgid "The string ``'01234567'``."
+msgstr "La cadena de caracteres ``'01234567'``."
+
+#: ../Doc/library/string.rst:59
+msgid ""
+"String of ASCII characters which are considered punctuation characters in "
+"the ``C`` locale: ``!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~``."
+msgstr ""
+"Cadena de caracteres ASCII que se consideran caracteres de puntuación en la "
+"configuración regional ``C``: ``!\" #$%&'()*+,-./:;<=>?@[\\]^_`{|} ~``."
+
+#: ../Doc/library/string.rst:64
+msgid ""
+"String of ASCII characters which are considered printable.  This is a "
+"combination of :const:`digits`, :const:`ascii_letters`, :const:"
+"`punctuation`, and :const:`whitespace`."
+msgstr ""
+"Cadena de caracteres ASCII que se consideran imprimibles.  Esta es una "
+"combinación de :const:`digits`, :const:`ascii_letters`, :const:"
+"`punctuation`, y :const:`whitespace`."
+
+#: ../Doc/library/string.rst:71
+msgid ""
+"A string containing all ASCII characters that are considered whitespace. "
+"This includes the characters space, tab, linefeed, return, formfeed, and "
+"vertical tab."
+msgstr ""
+"Una cadena cuyos caracteres ASCII se consideran todos espacios en blanco. "
+"Esto incluye los caracteres espacio, tabulador, salto de línea, retorno, "
+"salto de página y tabulador vertical."
+
+#: ../Doc/library/string.rst:79
+msgid "Custom String Formatting"
+msgstr "Formato de cadena de caracteres personalizado"
+
+#: ../Doc/library/string.rst:81
+msgid ""
+"The built-in string class provides the ability to do complex variable "
+"substitutions and value formatting via the :meth:`~str.format` method "
+"described in :pep:`3101`.  The :class:`Formatter` class in the :mod:`string` "
+"module allows you to create and customize your own string formatting "
+"behaviors using the same implementation as the built-in :meth:`~str.format` "
+"method."
+msgstr ""
+"La clase cadena es una clase incorporada (*built-in*) que proporciona la "
+"capacidad de realizar sustituciones complejas de variables y formateo de "
+"valor a través del método :meth:`~str.format` descrito en :pep:`3101`.  La "
+"clase :class:`Formatter` del módulo :mod:`string` permite crear y "
+"personalizar sus propios comportamientos de formateo de cadena utilizando la "
+"misma implementación que el método integrado :meth:`~str.format`."
+
+#: ../Doc/library/string.rst:90
+msgid "The :class:`Formatter` class has the following public methods:"
+msgstr "La clase :class:`Formatter` tiene los siguientes métodos públicos:"
+
+#: ../Doc/library/string.rst:94
+msgid ""
+"The primary API method.  It takes a format string and an arbitrary set of "
+"positional and keyword arguments. It is just a wrapper that calls :meth:"
+"`vformat`."
+msgstr ""
+"Método principal de la API.  Recibe una cadena de formato y argumentos "
+"posicionales y de palabra clave arbitrarios. Es sólo un envoltorio que llama "
+"a :meth:`vformat`."
+
+#: ../Doc/library/string.rst:98
+msgid ""
+"A format string argument is now :ref:`positional-only <positional-"
+"only_parameter>`."
+msgstr ""
+"Un argumento de cadena de formato ahora es :ref:`solo posicional <positional-"
+"only_parameter>`."
+
+#: ../Doc/library/string.rst:104
+msgid ""
+"This function does the actual work of formatting.  It is exposed as a "
+"separate function for cases where you want to pass in a predefined "
+"dictionary of arguments, rather than unpacking and repacking the dictionary "
+"as individual arguments using the ``*args`` and ``**kwargs`` syntax.  :meth:"
+"`vformat` does the work of breaking up the format string into character data "
+"and replacement fields.  It calls the various methods described below."
+msgstr ""
+"Esta función realiza es la que realmente hace el trabajo de formateo.  Se "
+"expone como una función independiente para los casos en los que desea pasar "
+"un diccionario predefinido de argumentos, en lugar de desempaquetar y volver "
+"a empaquetar el diccionario como argumentos individuales mediante la "
+"sintaxis ``*args`` y ``**kwargs``.  :meth:`vformat` hace el trabajo de "
+"dividir la cadena de formato en datos de caracteres y campos de reemplazo.  "
+"Llama a los diversos métodos descritos a continuación."
+
+#: ../Doc/library/string.rst:112
+msgid ""
+"In addition, the :class:`Formatter` defines a number of methods that are "
+"intended to be replaced by subclasses:"
+msgstr ""
+"Además de eso, la clase :class:`Formatter` define varios métodos que se "
+"espera sean reemplazados por las subclases:"
+
+#: ../Doc/library/string.rst:117
+msgid ""
+"Loop over the format_string and return an iterable of tuples "
+"(*literal_text*, *field_name*, *format_spec*, *conversion*).  This is used "
+"by :meth:`vformat` to break the string into either literal text, or "
+"replacement fields."
+msgstr ""
+"Itera sobre *format_string* y retorna un iterable de tuplas (*literal_text*, "
+"*field_name*, *format_spec*, *conversion*). Es usado por :meth:`vformat` "
+"para dividir la cadena de caracteres en texto literal o en campos de "
+"reemplazo."
+
+#: ../Doc/library/string.rst:122
+msgid ""
+"The values in the tuple conceptually represent a span of literal text "
+"followed by a single replacement field.  If there is no literal text (which "
+"can happen if two replacement fields occur consecutively), then "
+"*literal_text* will be a zero-length string.  If there is no replacement "
+"field, then the values of *field_name*, *format_spec* and *conversion* will "
+"be ``None``."
+msgstr ""
+"Los valores en la tupla representan conceptualmente un intervalo de texto "
+"literal seguido por un único campo de reemplazo. Si no hay ningún texto "
+"literal (lo cual puede darse si dos campos de reemplazo ocurren "
+"consecutivamente), *literal_text* será una cadena de caracteres de longitud "
+"cero. Si no hay ningún campo de reemplazo, los valores de *field_name*, "
+"*format_spec* y *conversion* serán ``None``."
+
+#: ../Doc/library/string.rst:131
+msgid ""
+"Given *field_name* as returned by :meth:`parse` (see above), convert it to "
+"an object to be formatted.  Returns a tuple (obj, used_key).  The default "
+"version takes strings of the form defined in :pep:`3101`, such as "
+"\"0[name]\" or \"label.title\".  *args* and *kwargs* are as passed in to :"
+"meth:`vformat`.  The return value *used_key* has the same meaning as the "
+"*key* parameter to :meth:`get_value`."
+msgstr ""
+"Dado un *field_name* retornado por :meth:`parse` (véase arriba), el mismo es "
+"convertido a un objeto a formatear. retorna una tupla (*obj*, *used_key*). "
+"La versión por defecto toma cadenas de caracteres acorde a lo definido en :"
+"pep:`3101`, tales como \"0[*name*]\" o \"*label.title*\". *args* y *kwargs* "
+"se pasan al método :meth:`vformat`. El valor retornado *used_key* tiene el "
+"mismo significado que el parámetro *key* para :meth:`get_value`."
+
+#: ../Doc/library/string.rst:140
+msgid ""
+"Retrieve a given field value.  The *key* argument will be either an integer "
+"or a string.  If it is an integer, it represents the index of the positional "
+"argument in *args*; if it is a string, then it represents a named argument "
+"in *kwargs*."
+msgstr ""
+"Recuperar un valor de campo determinado.  El argumento *key* será un entero "
+"o una cadena de caracteres.  Si es un entero, representa el índice del "
+"argumento posicional en *args*; si es una cadena, representa un argumento "
+"definido en *kwargs*."
+
+#: ../Doc/library/string.rst:145
+msgid ""
+"The *args* parameter is set to the list of positional arguments to :meth:"
+"`vformat`, and the *kwargs* parameter is set to the dictionary of keyword "
+"arguments."
+msgstr ""
+"El parámetro *args* se establece como lista de argumentos posicionales en :"
+"meth:`vformat`, y el parámetro *kwargs* se establece como diccionario de "
+"argumentos de palabra clave."
+
+#: ../Doc/library/string.rst:149
+msgid ""
+"For compound field names, these functions are only called for the first "
+"component of the field name; subsequent components are handled through "
+"normal attribute and indexing operations."
+msgstr ""
+"Para nombres de campo compuesto, estas funciones son únicamente llamadas "
+"para el primer componente del campo. Los componentes que le siguen son "
+"tratados a través de operaciones normales de atributo e indexación."
+
+#: ../Doc/library/string.rst:153
+msgid ""
+"So for example, the field expression '0.name' would cause :meth:`get_value` "
+"to be called with a *key* argument of 0.  The ``name`` attribute will be "
+"looked up after :meth:`get_value` returns by calling the built-in :func:"
+"`getattr` function."
+msgstr ""
+"Por ejemplo, la expresión de campo '0.name' haría que :meth:`get_value` se "
+"llame con un argumento *key* igual a 0.  El atributo ''name'' se buscará "
+"después del retorno de :meth:`get_value` llamando a la función incorporada :"
+"func:`getattr`."
+
+#: ../Doc/library/string.rst:158
+msgid ""
+"If the index or keyword refers to an item that does not exist, then an :exc:"
+"`IndexError` or :exc:`KeyError` should be raised."
+msgstr ""
+"Si el índice o la palabra clave hace referencia a un elemento que no existe, "
+"se debe generar un :exc:`IndexError` o un :exc:`KeyError`."
+
+#: ../Doc/library/string.rst:163
+msgid ""
+"Implement checking for unused arguments if desired.  The arguments to this "
+"function is the set of all argument keys that were actually referred to in "
+"the format string (integers for positional arguments, and strings for named "
+"arguments), and a reference to the *args* and *kwargs* that was passed to "
+"vformat.  The set of unused args can be calculated from these parameters.  :"
+"meth:`check_unused_args` is assumed to raise an exception if the check fails."
+msgstr ""
+"Implementa el chequeo de argumentos no utilizados si así se desea.  Los "
+"argumentos de esta función son el conjunto de todas las claves de argumento "
+"a las que se hizo referencia en la cadena de formato (enteros para "
+"argumentos posicionales y cadenas de caracteres para argumentos con nombre) "
+"y una referencia a los *args* y *kwargs* que se pasaron a *vformat*.  El "
+"conjunto de *args* no utilizados se puede calcular a partir de estos "
+"parámetros. se asume que :meth:`check_unused_args` genera una excepción si "
+"se produce un error en el chequeo."
+
+#: ../Doc/library/string.rst:173
+msgid ""
+":meth:`format_field` simply calls the global :func:`format` built-in.  The "
+"method is provided so that subclasses can override it."
+msgstr ""
+":meth:`format_field` simplemente llama a la función incorporada :func:"
+"`format`.  El método se proporciona para que las subclases puedan "
+"sobrescribirlo."
+
+#: ../Doc/library/string.rst:178
+msgid ""
+"Converts the value (returned by :meth:`get_field`) given a conversion type "
+"(as in the tuple returned by the :meth:`parse` method).  The default version "
+"understands 's' (str), 'r' (repr) and 'a' (ascii) conversion types."
+msgstr ""
+"Convierte el valor (retornado por :meth:`get_field`) dado un tipo de "
+"conversión (tal como la tupla retornada por el método :meth:`parse`). La "
+"versión por defecto entiende los tipos de conversión 's' (str), 'r' (repr) y "
+"'a' (ascii)."
+
+#: ../Doc/library/string.rst:187
+msgid "Format String Syntax"
+msgstr "Sintaxis de formateo de cadena"
+
+#: ../Doc/library/string.rst:189
+msgid ""
+"The :meth:`str.format` method and the :class:`Formatter` class share the "
+"same syntax for format strings (although in the case of :class:`Formatter`, "
+"subclasses can define their own format string syntax).  The syntax is "
+"related to that of :ref:`formatted string literals <f-strings>`, but it is "
+"less sophisticated and, in particular, does not support arbitrary "
+"expressions."
+msgstr ""
+"El método :meth:`str.format` y la clase :class:`Formatter` comparten la "
+"misma sintaxis para las cadenas de caracteres de formato (aunque en el caso "
+"de :class:`Formatter` las subclases pueden definir su propia sintaxis de "
+"cadena de caracteres de formato).  La sintaxis es similar a la de :ref:"
+"`literales de cadena con formato <f-strings>` pero hay algunas diferencias."
+
+#: ../Doc/library/string.rst:202
+msgid ""
+"Format strings contain \"replacement fields\" surrounded by curly braces ``{}"
+"``. Anything that is not contained in braces is considered literal text, "
+"which is copied unchanged to the output.  If you need to include a brace "
+"character in the literal text, it can be escaped by doubling: ``{{`` and ``}}"
+"``."
+msgstr ""
+"Las cadenas de caracteres de formato contienen \"campos de reemplazo\" "
+"rodeados de llaves ``{}``. Todo lo que no está contenido entre llaves se "
+"considera texto literal, que se copia sin cambios en la salida.  Si se "
+"necesita incluir un carácter de llave en el texto literal, se puede escapar "
+"duplicando: ``{{`` *and* ``}}``."
+
+#: ../Doc/library/string.rst:207
+msgid "The grammar for a replacement field is as follows:"
+msgstr "La gramática para un campo de reemplazo es la siguiente:"
+
+#: ../Doc/library/string.rst:219
+msgid ""
+"In less formal terms, the replacement field can start with a *field_name* "
+"that specifies the object whose value is to be formatted and inserted into "
+"the output instead of the replacement field. The *field_name* is optionally "
+"followed by a  *conversion* field, which is preceded by an exclamation point "
+"``'!'``, and a *format_spec*, which is preceded by a colon ``':'``.  These "
+"specify a non-default format for the replacement value."
+msgstr ""
+"En términos menos formales, el campo de reemplazo puede comenzar con un "
+"*field_name* (nombre de campo) que especifica el objeto cuyo valor se va a "
+"formatear e insertar en la salida en lugar del campo de reemplazo. El nombre "
+"de campo (*field_name*) va seguido opcionalmente de un campo *conversion* "
+"(conversión), que va precedido de un signo de exclamación ``'!'``, y un "
+"*format_spec*, que va precedido de dos puntos ``':'``.  Estos especifican un "
+"formato no predeterminado para el valor de reemplazo."
+
+#: ../Doc/library/string.rst:226
+msgid "See also the :ref:`formatspec` section."
+msgstr "Véase también la sección :ref:`formatspec`."
+
+#: ../Doc/library/string.rst:228
+msgid ""
+"The *field_name* itself begins with an *arg_name* that is either a number or "
+"a keyword.  If it's a number, it refers to a positional argument, and if "
+"it's a keyword, it refers to a named keyword argument.  If the numerical "
+"arg_names in a format string are 0, 1, 2, ... in sequence, they can all be "
+"omitted (not just some) and the numbers 0, 1, 2, ... will be automatically "
+"inserted in that order. Because *arg_name* is not quote-delimited, it is not "
+"possible to specify arbitrary dictionary keys (e.g., the strings ``'10'`` or "
+"``':-]'``) within a format string. The *arg_name* can be followed by any "
+"number of index or attribute expressions. An expression of the form ``'."
+"name'`` selects the named attribute using :func:`getattr`, while an "
+"expression of the form ``'[index]'`` does an index lookup using :func:"
+"`__getitem__`."
+msgstr ""
+"El *field_name* (nombre de campo) comienza con un *arg_name* que es un "
+"número o una palabra clave.  Si es un número, hace referencia a un argumento "
+"posicional y, si es una palabra clave, hace referencia a un argumento de "
+"palabra clave.  Si los *arg_names* numéricos en una cadena de caracteres de "
+"formato son una secuencia como 0, 1, 2, ..., todos pueden ser omitidos (no "
+"sólo algunos) y los números 0, 1, 2, ... se insertarán automáticamente en "
+"ese orden. Dado que *arg_name* no está delimitado por comillas, no es "
+"posible especificar claves de diccionario arbitrarias (por ejemplo, las "
+"cadenas ``'10'`` or ``':-]'``) dentro de una cadena de caracteres de "
+"formato. El *arg_name* puede ir seguido de cualquier número de expresiones "
+"de índice o atributo. Una expresión con forma ``'.name'`` selecciona el "
+"atributo con nombre mediante :func:`getattr`, mientras que una expresión con "
+"forma ``'[index]'`` realiza una búsqueda de índice mediante :func:"
+"`__getitem__`."
+
+#: ../Doc/library/string.rst:240
+msgid ""
+"The positional argument specifiers can be omitted for :meth:`str.format`, so "
+"``'{} {}'.format(a, b)`` is equivalent to ``'{0} {1}'.format(a, b)``."
+msgstr ""
+"Los especificadores de argumentos posicionales pueden ser omitidos en :meth:"
+"`str.format`, así ``'{} {}'.format(a, b)`` es equivalente a ``'{0} {1}'."
+"format(a, b)``."
+
+#: ../Doc/library/string.rst:244
+msgid ""
+"The positional argument specifiers can be omitted for :class:`Formatter`."
+msgstr ""
+"Para la clase :class:`Formatter`, los especificadores de argumento "
+"posicional pueden ser omitidos."
+
+#: ../Doc/library/string.rst:247
+msgid "Some simple format string examples::"
+msgstr "Algunos ejemplos simples de cadena de formato:"
+
+#: ../Doc/library/string.rst:256
+msgid ""
+"The *conversion* field causes a type coercion before formatting.  Normally, "
+"the job of formatting a value is done by the :meth:`__format__` method of "
+"the value itself.  However, in some cases it is desirable to force a type to "
+"be formatted as a string, overriding its own definition of formatting.  By "
+"converting the value to a string before calling :meth:`__format__`, the "
+"normal formatting logic is bypassed."
+msgstr ""
+"El campo *conversion* causa una coerción de tipo antes del formateo. "
+"Normalmente, el formateo es hecho el método :meth:`__format__` del valor "
+"mismo. Sin embargo, en algunos es deseable forzar el tipo a ser formateado "
+"como una cadena de caracteres, sobrescribiendo su propia definición de "
+"formateo. Cuando se convierte el valor a una cadena de caracteres antes de "
+"llamar al método :meth:`__format__`, la lógica normal de formateo es evitada."
+
+#: ../Doc/library/string.rst:263
+msgid ""
+"Three conversion flags are currently supported: ``'!s'`` which calls :func:"
+"`str` on the value, ``'!r'`` which calls :func:`repr` and ``'!a'`` which "
+"calls :func:`ascii`."
+msgstr ""
+"Tres banderas de conversión son admitidas actualmente: ``'!s'``, que llama "
+"a :func:`str` con el valor; ``'!r'``, que llama a :func:`repr`; y ``'!a'`` "
+"que llama a :func:`ascii`."
+
+#: ../Doc/library/string.rst:267
+msgid "Some examples::"
+msgstr "Algunos ejemplos::"
+
+#: ../Doc/library/string.rst:273
+msgid ""
+"The *format_spec* field contains a specification of how the value should be "
+"presented, including such details as field width, alignment, padding, "
+"decimal precision and so on.  Each value type can define its own "
+"\"formatting mini-language\" or interpretation of the *format_spec*."
+msgstr ""
+"El campo *format_spec* contiene la especificación de cómo presentar el "
+"valor, incluyendo detalles como ancho del campo, alineación, relleno, "
+"precisión decimal, etc. Cada tipo de valor puede definir su propio \"mini "
+"lenguaje de formateo\" o interpretación de *format_spec*."
+
+#: ../Doc/library/string.rst:278
+msgid ""
+"Most built-in types support a common formatting mini-language, which is "
+"described in the next section."
+msgstr ""
+"La mayoría de los tipos integrados admiten un formateo común de mini-idioma "
+"descrito en la siguiente sección."
+
+#: ../Doc/library/string.rst:281
+msgid ""
+"A *format_spec* field can also include nested replacement fields within it. "
+"These nested replacement fields may contain a field name, conversion flag "
+"and format specification, but deeper nesting is not allowed.  The "
+"replacement fields within the format_spec are substituted before the "
+"*format_spec* string is interpreted. This allows the formatting of a value "
+"to be dynamically specified."
+msgstr ""
+"Un campo *format_spec* también puede incluir campos de reemplazo anidados "
+"dentro de él. Estos campos de reemplazo anidados pueden contener un nombre "
+"de campo, una bandera de conversión y una especificación de formato, pero no "
+"se permite anidamiento más profundo.  Los campos de reemplazo dentro de "
+"*format_spec* se sustituyen antes de que la cadena *format_spec* se "
+"interprete. Esto permite especificar dinámicamente el formato de un valor."
+
+#: ../Doc/library/string.rst:288
+msgid "See the :ref:`formatexamples` section for some examples."
+msgstr "Para más ejemplos, véase la sección :ref:`formatexamples`."
+
+#: ../Doc/library/string.rst:294
+msgid "Format Specification Mini-Language"
+msgstr "Especificación de formato Mini-Lenguaje"
+
+#: ../Doc/library/string.rst:296
+msgid ""
+"\"Format specifications\" are used within replacement fields contained "
+"within a format string to define how individual values are presented (see :"
+"ref:`formatstrings` and :ref:`f-strings`). They can also be passed directly "
+"to the built-in :func:`format` function.  Each formattable type may define "
+"how the format specification is to be interpreted."
+msgstr ""
+"Las \"especificaciones de formato\" son usadas dentro de campos de reemplazo "
+"contenidos en una cadena de formateo para definir como se presentan los "
+"valores individuales (véase :ref:`formatstrings` y :ref:`f-strings`). Los "
+"mismos pueden también ser pasados directamente a la función incorporada :"
+"func:`format`. Cada tipo formateable puede definir cómo interpretar la "
+"especificación de formato."
+
+#: ../Doc/library/string.rst:303
+msgid ""
+"Most built-in types implement the following options for format "
+"specifications, although some of the formatting options are only supported "
+"by the numeric types."
+msgstr ""
+"La mayoría de los tipos integrados implementan las siguientes opciones para "
+"especificaciones de formato, aunque algunas de las opciones de formateo sólo "
+"son posibles con los tipos numéricos."
+
+#: ../Doc/library/string.rst:306
+msgid ""
+"A general convention is that an empty format specification produces the same "
+"result as if you had called :func:`str` on the value. A non-empty format "
+"specification typically modifies the result."
+msgstr ""
+"Una convención general es que una especificación de formato vacía produce el "
+"mismo resultado que llamar a la función :func:`str` con el valor. Una "
+"especificación no vacía típicamente modifica el resultado."
+
+#: ../Doc/library/string.rst:310
+msgid "The general form of a *standard format specifier* is:"
+msgstr "La forma general de un *especificador estándar de formato* es:"
+
+#: ../Doc/library/string.rst:322
+msgid ""
+"If a valid *align* value is specified, it can be preceded by a *fill* "
+"character that can be any character and defaults to a space if omitted. It "
+"is not possible to use a literal curly brace (\"``{``\" or \"``}``\") as the "
+"*fill* character in a :ref:`formatted string literal <f-strings>` or when "
+"using the :meth:`str.format` method.  However, it is possible to insert a "
+"curly brace with a nested replacement field.  This limitation doesn't affect "
+"the :func:`format` function."
+msgstr ""
+"Si se especifica un valor *align* válido, puede ir precedido por un carácter "
+"*fill*, que puede ser cualquier carácter y cuyo valor predeterminado es un "
+"espacio si se omite. No es posible utilizar una llave literal (\"``{``\" or "
+"\"``}``\") como el carácter *fill* en un :ref:`formato literal de cadena <f-"
+"strings>` o cuando se utiliza el método :meth:`str.format`.  Sin embargo, es "
+"posible insertar una llave con un campo de reemplazo anidado.  Esta "
+"limitación no afecta a la función :func:`format`."
+
+#: ../Doc/library/string.rst:331
+msgid "The meaning of the various alignment options is as follows:"
+msgstr ""
+"El significado de las distintas opciones de alineación es el siguiente:"
+
+#: ../Doc/library/string.rst:340 ../Doc/library/string.rst:371
+msgid "Option"
+msgstr "Opción"
+
+#: ../Doc/library/string.rst:340 ../Doc/library/string.rst:371
+#: ../Doc/library/string.rst:454 ../Doc/library/string.rst:465
+#: ../Doc/library/string.rst:500
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../Doc/library/string.rst:342
+msgid "``'<'``"
+msgstr "``'<'``"
+
+#: ../Doc/library/string.rst:342
+msgid ""
+"Forces the field to be left-aligned within the available space (this is the "
+"default for most objects)."
+msgstr ""
+"Fuerza el campo a ser alineado a la izquierda dentro del espacio disponible "
+"(éste es el comportamiento por defecto para la mayoría de los objetos)."
+
+#: ../Doc/library/string.rst:345
+msgid "``'>'``"
+msgstr "``'>'``"
+
+#: ../Doc/library/string.rst:345
+msgid ""
+"Forces the field to be right-aligned within the available space (this is the "
+"default for numbers)."
+msgstr ""
+"Fuerza el campo a ser alineado a la derecha dentro del espacio disponible "
+"(éste es el comportamiento por defecto para números)."
+
+#: ../Doc/library/string.rst:348
+msgid "``'='``"
+msgstr "``'='``"
+
+#: ../Doc/library/string.rst:348
+msgid ""
+"Forces the padding to be placed after the sign (if any) but before the "
+"digits.  This is used for printing fields in the form '+000000120'. This "
+"alignment option is only valid for numeric types.  It becomes the default "
+"for numbers when '0' immediately precedes the field width."
+msgstr ""
+"Fuerza el relleno a ser colocarlo después del signo (si existe) pero antes "
+"de los dígitos.  Esto se utiliza para imprimir campos con el formato "
+"'+000000120'. Esta opción de alineación solo es válida para tipos "
+"numéricos.  Se convierte en el valor predeterminado cuando '0' precede "
+"inmediatamente al ancho del campo."
+
+#: ../Doc/library/string.rst:354
+msgid "``'^'``"
+msgstr "``'^'``"
+
+#: ../Doc/library/string.rst:354
+msgid "Forces the field to be centered within the available space."
+msgstr "Fuerza el centrado del campo dentro del espacio disponible."
+
+#: ../Doc/library/string.rst:358
+msgid ""
+"Note that unless a minimum field width is defined, the field width will "
+"always be the same size as the data to fill it, so that the alignment option "
+"has no meaning in this case."
+msgstr ""
+"Notar que, a menos que se defina un ancho de campo mínimo, el ancho del "
+"campo siempre tendrá el mismo tamaño que los datos para rellenarlo, de modo "
+"que la opción de alineación no tiene ningún significado en este caso."
+
+#: ../Doc/library/string.rst:362
+msgid ""
+"The *sign* option is only valid for number types, and can be one of the "
+"following:"
+msgstr ""
+"La opción *sign* (signo) sólo es válida para los tipos numéricos y puede ser "
+"una de las siguientes:"
+
+#: ../Doc/library/string.rst:373
+msgid "``'+'``"
+msgstr "``'+'``"
+
+#: ../Doc/library/string.rst:373
+msgid ""
+"indicates that a sign should be used for both positive as well as negative "
+"numbers."
+msgstr ""
+"indica que el signo debe ser usado tanto para los números positivos como "
+"negativos."
+
+#: ../Doc/library/string.rst:376
+msgid "``'-'``"
+msgstr "``'-'``"
+
+#: ../Doc/library/string.rst:376
+msgid ""
+"indicates that a sign should be used only for negative numbers (this is the "
+"default behavior)."
+msgstr ""
+"indica que el signo debe ser usado sólo para números negativos (éste es el "
+"comportamiento por defecto)."
+
+#: ../Doc/library/string.rst:379
+msgid "space"
+msgstr "espacio"
+
+#: ../Doc/library/string.rst:379
+msgid ""
+"indicates that a leading space should be used on positive numbers, and a "
+"minus sign on negative numbers."
+msgstr ""
+"indica que el espacio inicial debe ser usado para números positivos y el "
+"signo menos para números negativos."
+
+#: ../Doc/library/string.rst:386
+msgid ""
+"The ``'z'`` option coerces negative zero floating-point values to positive "
+"zero after rounding to the format precision.  This option is only valid for "
+"floating-point presentation types."
+msgstr ""
+"La opción ``'z'`` convierte los valores de coma flotante de cero negativos "
+"en cero positivos después de redondear al formato de precisión. Esta opción "
+"solo es válida para los tipos de presentación de coma flotante."
+
+#: ../Doc/library/string.rst:390
+msgid "Added the ``'z'`` option (see also :pep:`682`)."
+msgstr "Se agregó la opción ``'z'`` (véase también :pep:`682`)."
+
+#: ../Doc/library/string.rst:395
+msgid ""
+"The ``'#'`` option causes the \"alternate form\" to be used for the "
+"conversion.  The alternate form is defined differently for different types.  "
+"This option is only valid for integer, float and complex types. For "
+"integers, when binary, octal, or hexadecimal output is used, this option "
+"adds the respective prefix ``'0b'``, ``'0o'``, ``'0x'``, or ``'0X'`` to the "
+"output value. For float and complex the alternate form causes the result of "
+"the conversion to always contain a decimal-point character, even if no "
+"digits follow it. Normally, a decimal-point character appears in the result "
+"of these conversions only if a digit follows it. In addition, for ``'g'`` "
+"and ``'G'`` conversions, trailing zeros are not removed from the result."
+msgstr ""
+"La opción ``'#'`` hace que la \"forma alternativa\" se utilice para la "
+"conversión.  La forma alternativa se define de forma diferente para "
+"diferentes tipos.  Esta opción solo es válida para los tipos entero, "
+"flotante y complejo. Para los enteros, cuando se utiliza la salida binaria, "
+"octal o hexadecimal, esta opción agrega el respectivo prefijo ``'0b'``, "
+"``'0o'`` o ``'0x'`` al valor de salida. Para los flotantes y complejos, la "
+"forma alternativa hace que el resultado de la conversión siempre contenga un "
+"carácter de punto decimal, incluso si no hay dígitos que lo sigan. "
+"Normalmente, un carácter de punto decimal aparece en el resultado de estas "
+"conversiones sólo si un dígito lo sigue. Además, para las conversiones "
+"``'g'`` y ``'G'``, los ceros finales no se eliminan del resultado."
+
+#: ../Doc/library/string.rst:409
+msgid ""
+"The ``','`` option signals the use of a comma for a thousands separator. For "
+"a locale aware separator, use the ``'n'`` integer presentation type instead."
+msgstr ""
+"La opción ``','`` señala el uso de una coma como separador de miles. En "
+"cambio, para un separador consciente de localización (*local aware*), usar "
+"el tipo de presentación de enteros ``'n'``."
+
+#: ../Doc/library/string.rst:413
+msgid "Added the ``','`` option (see also :pep:`378`)."
+msgstr "Se agregó la opción ``','`` (véase también :pep:`378`)."
+
+#: ../Doc/library/string.rst:418
+msgid ""
+"The ``'_'`` option signals the use of an underscore for a thousands "
+"separator for floating point presentation types and for integer presentation "
+"type ``'d'``.  For integer presentation types ``'b'``, ``'o'``, ``'x'``, and "
+"``'X'``, underscores will be inserted every 4 digits.  For other "
+"presentation types, specifying this option is an error."
+msgstr ""
+"La opción ``'_'`` señaliza el uso del guión bajo como separador de miles "
+"para tipos de presentación de punto flotante y para tipos de presentación de "
+"enteros ``'d'``. Para los tipos de presentación de enteros ``'b'``, ``'o'``, "
+"``'x'`` y ``'X'``, el guión bajo se insertará cada 4 dígitos. Para otros "
+"tipos de presentación, especificar esta opción es un error."
+
+#: ../Doc/library/string.rst:425
+msgid "Added the ``'_'`` option (see also :pep:`515`)."
+msgstr "Se agregó la opción ``'_'`` (véase también :pep:`515`)."
+
+#: ../Doc/library/string.rst:428
+msgid ""
+"*width* is a decimal integer defining the minimum total field width, "
+"including any prefixes, separators, and other formatting characters. If not "
+"specified, then the field width will be determined by the content."
+msgstr ""
+"*width* es un entero decimal que define el ancho total de campo mínimo, "
+"incluyendo prefijos, separadores y otros caracteres de formateo. Si no se "
+"especifica, el ancho de campo será determinado por el contenido."
+
+#: ../Doc/library/string.rst:432
+msgid ""
+"When no explicit alignment is given, preceding the *width* field by a zero "
+"(``'0'``) character enables sign-aware zero-padding for numeric types.  This "
+"is equivalent to a *fill* character of ``'0'`` with an *alignment* type of "
+"``'='``."
+msgstr ""
+"Cuando no se proporciona ninguna alineación explícita, si el campo *width* "
+"es precedido por un carácter cero (``'0'``), se habilita el relleno cero con "
+"reconocimiento de signos para los tipos numéricos.  Esto equivale a un "
+"carácter *fill* de ``'0'`` con un tipo de *alignment* de ``'='``."
+
+#: ../Doc/library/string.rst:437
+msgid ""
+"Preceding the *width* field by ``'0'`` no longer affects the default "
+"alignment for strings."
+msgstr ""
+"Anteponer el campo *width* por ``'0'`` ya no afecta el alineamiento por "
+"defecto para cadenas de caracteres."
+
+#: ../Doc/library/string.rst:441
+msgid ""
+"The *precision* is a decimal integer indicating how many digits should be "
+"displayed after the decimal point for presentation types ``'f'`` and "
+"``'F'``, or before and after the decimal point for presentation types "
+"``'g'`` or ``'G'``.  For string presentation types the field indicates the "
+"maximum field size - in other words, how many characters will be used from "
+"the field content.  The *precision* is not allowed for integer presentation "
+"types."
+msgstr ""
+"La *precisión* es un entero decimal que indica cuántos dígitos deben "
+"mostrarse después del punto decimal para los tipos de presentación ``'f'`` y "
+"``'F'``, o antes y después del punto decimal para los tipos de presentación "
+"``'g'`` o ``'G'``. Para los tipos de presentación de cadena, el campo indica "
+"el tamaño máximo del campo; en otras palabras, cuántos caracteres se "
+"utilizarán del contenido del campo. La *precisión* no está permitida para "
+"los tipos de presentación de enteros."
+
+#: ../Doc/library/string.rst:449
+msgid "Finally, the *type* determines how the data should be presented."
+msgstr "Finalmente, *type* (el tipo) determina como presentar los datos."
+
+#: ../Doc/library/string.rst:451
+msgid "The available string presentation types are:"
+msgstr "Los tipos de presentación cadena disponibles son:"
+
+#: ../Doc/library/string.rst:454 ../Doc/library/string.rst:465
+#: ../Doc/library/string.rst:500
+msgid "Type"
+msgstr "Tipo"
+
+#: ../Doc/library/string.rst:456
+msgid "``'s'``"
+msgstr "``'s'``"
+
+#: ../Doc/library/string.rst:456
+msgid "String format. This is the default type for strings and may be omitted."
+msgstr ""
+"Formato de cadena de caracteres. Éste es el tipo por defecto y puede ser "
+"omitido."
+
+#: ../Doc/library/string.rst:459 ../Doc/library/string.rst:488
+#: ../Doc/library/string.rst:575
+msgid "None"
+msgstr "None"
+
+#: ../Doc/library/string.rst:459
+msgid "The same as ``'s'``."
+msgstr "Lo mismo que ``'s'``."
+
+#: ../Doc/library/string.rst:462
+msgid "The available integer presentation types are:"
+msgstr "Los tipos disponibles para la presentación de enteros son:"
+
+#: ../Doc/library/string.rst:467
+msgid "``'b'``"
+msgstr "``'b'``"
+
+#: ../Doc/library/string.rst:467
+msgid "Binary format. Outputs the number in base 2."
+msgstr "Formato binario. retorna el número en base 2."
+
+#: ../Doc/library/string.rst:469
+msgid "``'c'``"
+msgstr "``'c'``"
+
+#: ../Doc/library/string.rst:469
+msgid ""
+"Character. Converts the integer to the corresponding unicode character "
+"before printing."
+msgstr ""
+"Carácter. Convierte el entero en el carácter unicode correspondiente antes "
+"de imprimirlo."
+
+#: ../Doc/library/string.rst:472
+msgid "``'d'``"
+msgstr "``'d'``"
+
+#: ../Doc/library/string.rst:472
+msgid "Decimal Integer. Outputs the number in base 10."
+msgstr "Decimal entero. retorna el número en base 10."
+
+#: ../Doc/library/string.rst:474
+msgid "``'o'``"
+msgstr "``'o'``"
+
+#: ../Doc/library/string.rst:474
+msgid "Octal format. Outputs the number in base 8."
+msgstr "Formato octal. retorna el número en base 8."
+
+#: ../Doc/library/string.rst:476
+msgid "``'x'``"
+msgstr "``'x'``"
+
+#: ../Doc/library/string.rst:476
+msgid ""
+"Hex format. Outputs the number in base 16, using lower-case letters for the "
+"digits above 9."
+msgstr ""
+"Formato hexadecimal. retorna el número en base 16, utilizando letras "
+"minúsculas para los dígitos superiores a 9."
+
+#: ../Doc/library/string.rst:479
+msgid "``'X'``"
+msgstr "``'X'``"
+
+#: ../Doc/library/string.rst:479
+msgid ""
+"Hex format. Outputs the number in base 16, using upper-case letters for the "
+"digits above 9. In case ``'#'`` is specified, the prefix ``'0x'`` will be "
+"upper-cased to ``'0X'`` as well."
+msgstr ""
+"Formato hexadecimal. retorna el número en base 16, utilizando letras "
+"mayúsculas para los dígitos superiores a 9. En caso de que ``'#'`` se "
+"especifique, el prefijo ``'0x'`` convertirá en ``'0X'`` también."
+
+#: ../Doc/library/string.rst:484 ../Doc/library/string.rst:568
+msgid "``'n'``"
+msgstr "``'n'``"
+
+#: ../Doc/library/string.rst:484
+msgid ""
+"Number. This is the same as ``'d'``, except that it uses the current locale "
+"setting to insert the appropriate number separator characters."
+msgstr ""
+"Número. Es lo mismo que ``'d'``, excepto que usa la configuración regional "
+"actual para insertar el número apropiado de caracteres separadores."
+
+#: ../Doc/library/string.rst:488
+msgid "The same as ``'d'``."
+msgstr "Lo mismo que ``'d'``."
+
+#: ../Doc/library/string.rst:491
+msgid ""
+"In addition to the above presentation types, integers can be formatted with "
+"the floating point presentation types listed below (except ``'n'`` and "
+"``None``). When doing so, :func:`float` is used to convert the integer to a "
+"floating point number before formatting."
+msgstr ""
+"Además de los tipos de presentación arriba expuestos, los enteros se pueden "
+"formatear con los tipos de presentación de punto flotante enumerados a "
+"continuación (excepto ``'n'`` y ``None``). Al hacerlo, :func:`float` se "
+"utiliza para convertir el entero en un número de punto flotante antes de ser "
+"formateado."
+
+#: ../Doc/library/string.rst:496
+msgid ""
+"The available presentation types for :class:`float` and :class:`~decimal."
+"Decimal` values are:"
+msgstr ""
+"Los tipos de presentación disponibles para valores  :class:`float` y :class:"
+"`~decimal.Decimal` son:"
+
+#: ../Doc/library/string.rst:502
+msgid "``'e'``"
+msgstr "``'e'``"
+
+#: ../Doc/library/string.rst:502
+msgid ""
+"Scientific notation. For a given precision ``p``, formats the number in "
+"scientific notation with the letter 'e' separating the coefficient from the "
+"exponent. The coefficient has one digit before and ``p`` digits after the "
+"decimal point, for a total of ``p + 1`` significant digits. With no "
+"precision given, uses a precision of ``6`` digits after the decimal point "
+"for :class:`float`, and shows all coefficient digits for :class:`~decimal."
+"Decimal`. If no digits follow the decimal point, the decimal point is also "
+"removed unless the ``#`` option is used."
+msgstr ""
+"Notación científica. Para una precisión dada ``p``, formatea el número en "
+"notación científica con la letra ``e`` separando el coeficiente del "
+"exponente. El coeficiente tiene un dígito antes, y ``p`` dígitos después, "
+"del punto decimal, para un total de ``p + 1`` dígitos significativos. Cuando "
+"se no da una precisión, usa una precisión de ``6`` dígitos después del punto "
+"decimal para :class:`float`, y muestra todos los dígitos del coeficiente "
+"para :class:`~decimal.Decimal`. Si no hay dígitos después del punto decimal, "
+"el punto decimal también es removido a no ser que se use la opción ``#``."
+
+#: ../Doc/library/string.rst:514
+msgid "``'E'``"
+msgstr "``'E'``"
+
+#: ../Doc/library/string.rst:514
+msgid ""
+"Scientific notation. Same as ``'e'`` except it uses an upper case 'E' as the "
+"separator character."
+msgstr ""
+"Notación científica. Igual que ``'e'`` excepto que utiliza una 'E' mayúscula "
+"como carácter separador."
+
+#: ../Doc/library/string.rst:517
+msgid "``'f'``"
+msgstr "``'f'``"
+
+#: ../Doc/library/string.rst:517
+msgid ""
+"Fixed-point notation. For a given precision ``p``, formats the number as a "
+"decimal number with exactly ``p`` digits following the decimal point. With "
+"no precision given, uses a precision of ``6`` digits after the decimal point "
+"for :class:`float`, and uses a precision large enough to show all "
+"coefficient digits for :class:`~decimal.Decimal`. If no digits follow the "
+"decimal point, the decimal point is also removed unless the ``#`` option is "
+"used."
+msgstr ""
+"Notación de punto fijo. Para una precisión dada ``p``, formatea el número "
+"como un valor decimal con exactamente ``p`` dígitos siguiendo el punto "
+"decimal. Cuando no se da una precisión, usa una precisión de ``6`` dígitos "
+"después del punto decimal para :class:`float`, y usa una precisión tan "
+"grande como sea necesaria para mostrar todos los dígitos del coeficiente "
+"para :class:`~decimal.Decimal`. Si no hay dígitos después del punto decimal, "
+"el punto decimal también es removido a no ser que se use la opción ``#``."
+
+#: ../Doc/library/string.rst:527
+msgid "``'F'``"
+msgstr "``'F'``"
+
+#: ../Doc/library/string.rst:527
+msgid ""
+"Fixed-point notation. Same as ``'f'``, but converts ``nan`` to  ``NAN`` and "
+"``inf`` to ``INF``."
+msgstr ""
+"Notación de punto fijo. Igual que ``'f'``, pero convierte (nulos) ``nan`` a "
+"``NAN`` e ``inf`` a ``INF``."
+
+#: ../Doc/library/string.rst:530
+msgid "``'g'``"
+msgstr "``'g'``"
+
+#: ../Doc/library/string.rst:530
+msgid ""
+"General format.  For a given precision ``p >= 1``, this rounds the number to "
+"``p`` significant digits and then formats the result in either fixed-point "
+"format or in scientific notation, depending on its magnitude. A precision of "
+"``0`` is treated as equivalent to a precision of ``1``."
+msgstr ""
+"Formato general. Para una precisión dada ``p >= 1``, redondea el número a "
+"``p`` dígitos significativos y luego formatea el resultado como formato de "
+"punto fijo o en notación científica, dependiendo de su magnitud. Una "
+"precisión de ``0`` es tratada como equivalente a una precisión de ``1``."
+
+#: ../Doc/library/string.rst:537
+msgid ""
+"The precise rules are as follows: suppose that the result formatted with "
+"presentation type ``'e'`` and precision ``p-1`` would have exponent "
+"``exp``.  Then, if ``m <= exp < p``, where ``m`` is -4 for floats and -6 "
+"for :class:`Decimals <decimal.Decimal>`, the number is formatted with "
+"presentation type ``'f'`` and precision ``p-1-exp``.  Otherwise, the number "
+"is formatted with presentation type ``'e'`` and precision ``p-1``. In both "
+"cases insignificant trailing zeros are removed from the significand, and the "
+"decimal point is also removed if there are no remaining digits following it, "
+"unless the ``'#'`` option is used."
+msgstr ""
+"Las reglas precisas son las siguientes: supongamos que el resultado "
+"formateado con el tipo de presentación ``'e'`` y la precisión ``p-1`` tiene "
+"exponente ``exp``.  Entonces, si ``m <= exp < p``, donde ``m`` es -4 para "
+"*floats* y -6 para :class:`Decimals <decimal.Decimal>`, el número se "
+"formatea con el tipo de presentación ``'f'`` y la precisión ``p-1-exp``.  De "
+"lo contrario, el número se formatea con el tipo de presentación ``'e'`` y "
+"precisión ``p-1``. En ambos casos, los ceros finales insignificantes se "
+"eliminan del significado, y el punto decimal también se elimina si no hay "
+"dígitos restantes que lo sigan, a menos que se utilice la opción ``'#'``."
+
+#: ../Doc/library/string.rst:550
+msgid ""
+"With no precision given, uses a precision of ``6`` significant digits for :"
+"class:`float`. For :class:`~decimal.Decimal`, the coefficient of the result "
+"is formed from the coefficient digits of the value; scientific notation is "
+"used for values smaller than ``1e-6`` in absolute value and values where the "
+"place value of the least significant digit is larger than 1, and fixed-point "
+"notation is used otherwise."
+msgstr ""
+"Si no se da una precisión, usa una precisión de ``6`` dígitos significativos "
+"para :class:`float`. Para :class:`~decimal.Decimal` el coeficiente del "
+"resultado se construye usando los dígitos del coeficiente del valor; se usa "
+"notación científica para valores menores a ``1e-6`` en valor absoluto y "
+"valores donde el valor posicional del dígito menos significativo es mayor a "
+"1, de otra forma se usa notación de punto fijo."
+
+#: ../Doc/library/string.rst:559
+msgid ""
+"Positive and negative infinity, positive and negative zero, and nans, are "
+"formatted as ``inf``, ``-inf``, ``0``, ``-0`` and ``nan`` respectively, "
+"regardless of the precision."
+msgstr ""
+"Infinito positivo y negativo, cero positivo y negativo, y nulos (*nans*) son "
+"respectivamente formateados como ``inf``, ``-inf``, ``0``, ``-0`` y ``nan``, "
+"independientemente de la precisión."
+
+#: ../Doc/library/string.rst:564
+msgid "``'G'``"
+msgstr "``'G'``"
+
+#: ../Doc/library/string.rst:564
+msgid ""
+"General format. Same as ``'g'`` except switches to ``'E'`` if the number "
+"gets too large. The representations of infinity and NaN are uppercased, too."
+msgstr ""
+"Formato general. Igual que ``'g'`` excepto que cambia a ``'E'`` si el número "
+"se vuelve muy grande. Las representaciones de infinito y NaN también se "
+"convierten a mayúsculas."
+
+#: ../Doc/library/string.rst:568
+msgid ""
+"Number. This is the same as ``'g'``, except that it uses the current locale "
+"setting to insert the appropriate number separator characters."
+msgstr ""
+"Número. Es lo mismo que ``'g'``, excepto que usa la configuración local para "
+"insertar los caracteres separadores de número apropiados."
+
+#: ../Doc/library/string.rst:572
+msgid "``'%'``"
+msgstr "``'%'``"
+
+#: ../Doc/library/string.rst:572
+msgid ""
+"Percentage. Multiplies the number by 100 and displays in fixed (``'f'``) "
+"format, followed by a percent sign."
+msgstr ""
+"Porcentaje. Multiplica el número por 100 y lo muestra en formato fijo "
+"(``'f'``) seguido del signo porcentaje."
+
+#: ../Doc/library/string.rst:575
+msgid ""
+"For :class:`float` this is the same as ``'g'``, except that when fixed-point "
+"notation is used to format the result, it always includes at least one digit "
+"past the decimal point. The precision used is as large as needed to "
+"represent the given value faithfully."
+msgstr ""
+"Para :class:`float` esto es lo mismo que ``'g'``, excepto que cuando se usa "
+"notación de punto fijo para formatear el resultado, siempre incluye al menos "
+"un dígito pasado el punto decimal. La precisión usada es tan larga como sea "
+"necesaria para representar el valor dado fielmente."
+
+#: ../Doc/library/string.rst:581
+msgid ""
+"For :class:`~decimal.Decimal`, this is the same as either ``'g'`` or ``'G'`` "
+"depending on the value of ``context.capitals`` for the current decimal "
+"context."
+msgstr ""
+"Para :class:`~decimal.Decimal`, esto es lo mismo que ``'g'`` o ``'G'`` "
+"dependiendo del valor de ``context.capitals`` para el contexto decimal "
+"actual."
+
+#: ../Doc/library/string.rst:585
+msgid ""
+"The overall effect is to match the output of :func:`str` as altered by the "
+"other format modifiers."
+msgstr ""
+"El efecto general es el de igualar la salida de :func:`str` al ser alterada  "
+"por los otros modificadores de formato."
+
+#: ../Doc/library/string.rst:593
+msgid "Format examples"
+msgstr "Ejemplos de formateo"
+
+#: ../Doc/library/string.rst:595
+msgid ""
+"This section contains examples of the :meth:`str.format` syntax and "
+"comparison with the old ``%``-formatting."
+msgstr ""
+"Esta sección contiene ejemplos de la sintaxis :meth:`str.format` y "
+"comparaciones con el antiguo método de formateo usando ``%``."
+
+#: ../Doc/library/string.rst:598
+#, python-format
+msgid ""
+"In most of the cases the syntax is similar to the old ``%``-formatting, with "
+"the addition of the ``{}`` and with ``:`` used instead of ``%``. For "
+"example, ``'%03.2f'`` can be translated to ``'{:03.2f}'``."
+msgstr ""
+"En la mayoría de los casos, la sintaxis es similar al antiguo formato ``%``, "
+"con la adición de ``{}`` y con ``:`` utilizado en lugar de ``%``. Por "
+"ejemplo, ``'%03.2f'`` puede ser traducido como ``'{:03.2f}'``."
+
+#: ../Doc/library/string.rst:602
+msgid ""
+"The new format syntax also supports new and different options, shown in the "
+"following examples."
+msgstr ""
+"La nueva sintaxis de formato también soporta opciones diferentes y nuevas "
+"que se muestran en los ejemplos siguientes."
+
+#: ../Doc/library/string.rst:605
+msgid "Accessing arguments by position::"
+msgstr "Accediendo argumentos por posición::"
+
+#: ../Doc/library/string.rst:618
+msgid "Accessing arguments by name::"
+msgstr "Accediendo argumentos por nombre::"
+
+#: ../Doc/library/string.rst:626
+msgid "Accessing arguments' attributes::"
+msgstr "Accediendo los atributos de los argumentos::"
+
+#: ../Doc/library/string.rst:641
+msgid "Accessing arguments' items::"
+msgstr "Accediendo ítems de los argumentos::"
+
+#: ../Doc/library/string.rst:647
+#, python-format
+msgid "Replacing ``%s`` and ``%r``::"
+msgstr "Reemplazar ``%s`` y ``%r``::"
+
+#: ../Doc/library/string.rst:652
+msgid "Aligning the text and specifying a width::"
+msgstr "Alinear el texto y especificar el ancho::"
+
+#: ../Doc/library/string.rst:663
+#, python-format
+msgid "Replacing ``%+f``, ``%-f``, and ``% f`` and specifying a sign::"
+msgstr "Reemplazar ``%+f``, ``%-f``, y ``% f`` y especificar el signo::"
+
+#: ../Doc/library/string.rst:672
+#, python-format
+msgid ""
+"Replacing ``%x`` and ``%o`` and converting the value to different bases::"
+msgstr ""
+"Reemplazando ``%x`` y ``%o`` y convirtiendo el valor a diferentes bases::"
+
+#: ../Doc/library/string.rst:681
+msgid "Using the comma as a thousands separator::"
+msgstr "Usando la coma como separador de los miles::"
+
+#: ../Doc/library/string.rst:686
+msgid "Expressing a percentage::"
+msgstr "Expresar un porcentaje::"
+
+#: ../Doc/library/string.rst:693
+msgid "Using type-specific formatting::"
+msgstr "Uso del formateo específico de tipo::"
+
+#: ../Doc/library/string.rst:700
+msgid "Nesting arguments and more complex examples::"
+msgstr "Anidando argumentos y ejemplos más complejos::"
+
+#: ../Doc/library/string.rst:734
+msgid "Template strings"
+msgstr "Cadenas de plantillas"
+
+#: ../Doc/library/string.rst:736
+msgid ""
+"Template strings provide simpler string substitutions as described in :pep:"
+"`292`.  A primary use case for template strings is for internationalization "
+"(i18n) since in that context, the simpler syntax and functionality makes it "
+"easier to translate than other built-in string formatting facilities in "
+"Python.  As an example of a library built on template strings for i18n, see "
+"the `flufl.i18n <https://flufli18n.readthedocs.io/en/latest/>`_ package."
+msgstr ""
+"Las cadenas de plantilla proporcionan sustituciones de cadenas de caracteres "
+"más sencillas como se describe en :pep:`292`.  Un caso de uso principal para "
+"las cadenas de plantilla es la internacionalización (i18n) ya que en ese "
+"contexto, la sintaxis y la funcionalidad más sencillas hacen la traducción "
+"más fácil que otras instalaciones de formato de cadena de caracteres "
+"integradas en Python.  Como ejemplo de una biblioteca creada sobre cadenas "
+"de plantilla para i18n, véase el paquete `flufl.i18n <http://flufli18n."
+"readthedocs.io/en/latest/>`_."
+
+#: ../Doc/library/string.rst:746
+msgid ""
+"Template strings support ``$``-based substitutions, using the following "
+"rules:"
+msgstr ""
+"Las cadenas de caracteres de plantilla admiten sustituciones basadas en "
+"``$`` de acuerdo a las siguientes reglas:"
+
+#: ../Doc/library/string.rst:748
+msgid "``$$`` is an escape; it is replaced with a single ``$``."
+msgstr "``$$`` es un escape. Es reemplazado con un único ``$``."
+
+#: ../Doc/library/string.rst:750
+msgid ""
+"``$identifier`` names a substitution placeholder matching a mapping key of "
+"``\"identifier\"``.  By default, ``\"identifier\"`` is restricted to any "
+"case-insensitive ASCII alphanumeric string (including underscores) that "
+"starts with an underscore or ASCII letter.  The first non-identifier "
+"character after the ``$`` character terminates this placeholder "
+"specification."
+msgstr ""
+"``$identifier`` (identificador) nombra un comodín de sustitución que "
+"coincide con una clave de asignación de ``\"identifier\"`` (identificador).  "
+"De forma predeterminada, ``\"identifier\"`` está restringido a cualquier "
+"cadena alfanumérica ASCII (insensible a mayúsculas/minúsculas e incluyendo "
+"los guiones bajos) que comience con un guión bajo o una letra ASCII.  El "
+"primer carácter no identificador después del carácter ``$`` termina esta "
+"especificación de comodín."
+
+#: ../Doc/library/string.rst:757
+msgid ""
+"``${identifier}`` is equivalent to ``$identifier``.  It is required when "
+"valid identifier characters follow the placeholder but are not part of the "
+"placeholder, such as ``\"${noun}ification\"``."
+msgstr ""
+"``${identifier}`` es equivalente a ``$identifier``. Es requerido cuando "
+"caracteres identificadores válidos siguen al comodín pero no son parte de "
+"él, por ejemplo ``\"${noun}ification\"``."
+
+#: ../Doc/library/string.rst:761
+msgid ""
+"Any other appearance of ``$`` in the string will result in a :exc:"
+"`ValueError` being raised."
+msgstr ""
+"Cualquier otra aparición de ``$`` en la cadena de caracteres resultará en "
+"una excepción :exc:`ValueError`."
+
+#: ../Doc/library/string.rst:764
+msgid ""
+"The :mod:`string` module provides a :class:`Template` class that implements "
+"these rules.  The methods of :class:`Template` are:"
+msgstr ""
+"El módulo :mod:`string` provee una clase :class:`Template` que implementa "
+"esas reglas. Los métodos de :class:`Template` son:"
+
+#: ../Doc/library/string.rst:770
+msgid "The constructor takes a single argument which is the template string."
+msgstr "El constructor sólo lleva un argumento, la cadena plantilla."
+
+#: ../Doc/library/string.rst:775
+msgid ""
+"Performs the template substitution, returning a new string.  *mapping* is "
+"any dictionary-like object with keys that match the placeholders in the "
+"template.  Alternatively, you can provide keyword arguments, where the "
+"keywords are the placeholders.  When both *mapping* and *kwds* are given and "
+"there are duplicates, the placeholders from *kwds* take precedence."
+msgstr ""
+"Realiza la sustitución de plantilla y retorna una nueva cadena de "
+"caracteres. *mapping* (mapeo) es un objeto tipo diccionario con claves "
+"(*keys*) que coinciden con los *placeholders* (comodines) de la plantilla. "
+"Como alternativa, es posible pasar argumentos de palabra clave cuyas "
+"palabras clave son los *placeholders* (comodines). Cuando *mapping* y *kwds* "
+"son dados y hay elementos duplicados, los *placeholders* (comodines) de "
+"*kwds* tienen prioridad."
+
+#: ../Doc/library/string.rst:784
+msgid ""
+"Like :meth:`substitute`, except that if placeholders are missing from "
+"*mapping* and *kwds*, instead of raising a :exc:`KeyError` exception, the "
+"original placeholder will appear in the resulting string intact.  Also, "
+"unlike with :meth:`substitute`, any other appearances of the ``$`` will "
+"simply return ``$`` instead of raising :exc:`ValueError`."
+msgstr ""
+"Igual que :meth:`substitute`, excepto que si faltan comodines de *mapping* y "
+"*kwds*, en lugar de generar una excepción :exc:`KeyError`, el comodín "
+"original aparecerá en la cadena de caracteres resultante intacta.  Además, a "
+"diferencia de :meth:`substitute`, cualquier otra aparición de ``$`` "
+"simplemente retornará ``$`` en lugar de generar :exc:`ValueError`."
+
+#: ../Doc/library/string.rst:790
+msgid ""
+"While other exceptions may still occur, this method is called \"safe\" "
+"because it always tries to return a usable string instead of raising an "
+"exception.  In another sense, :meth:`safe_substitute` may be anything other "
+"than safe, since it will silently ignore malformed templates containing "
+"dangling delimiters, unmatched braces, or placeholders that are not valid "
+"Python identifiers."
+msgstr ""
+"Mientras que otras excepciones aún pueden ocurrir, este método es llamado "
+"\"seguro\" (*safe*) porque siempre intenta retornar una cadena de caracteres "
+"que pueda ser usada en lugar de levantar una excepción. Desde otro punto de "
+"vista, el método :meth:`safe_substitute` es en realidad para nada seguro, "
+"dado que ignorará plantillas defectuosas con delimitadores colgados, llaves "
+"sin cerrar, o comodines que no son identificadores válidos en Python."
+
+#: ../Doc/library/string.rst:800
+msgid ""
+"Returns false if the template has invalid placeholders that will cause :meth:"
+"`substitute` to raise :exc:`ValueError`."
+msgstr ""
+"Retorna false si la plantilla tiene marcadores de posición no válidos que "
+"harán que :meth:`substitute` lance :exc:`ValueError`."
+
+#: ../Doc/library/string.rst:808
+msgid ""
+"Returns a list of the valid identifiers in the template, in the order they "
+"first appear, ignoring any invalid identifiers."
+msgstr ""
+"Retorna una lista de los identificadores válidos en la plantilla, en el "
+"orden en que aparecen por primera vez, ignorando cualquier identificador no "
+"válido."
+
+#: ../Doc/library/string.rst:813
+msgid ":class:`Template` instances also provide one public data attribute:"
+msgstr ""
+"Las instancias de :class:`Template` también proporcionan un atributo de "
+"datos públicos:"
+
+#: ../Doc/library/string.rst:817
+msgid ""
+"This is the object passed to the constructor's *template* argument.  In "
+"general, you shouldn't change it, but read-only access is not enforced."
+msgstr ""
+"Éste es el objeto que se le pasa como argumento *template* al constructor. "
+"En general, no debería ser modificado, pero el acceso de sólo lectura (*read-"
+"only*) no es impuesto."
+
+#: ../Doc/library/string.rst:820
+msgid "Here is an example of how to use a Template::"
+msgstr "Aquí un ejemplo de cómo usar una plantilla (*Template*)::"
+
+#: ../Doc/library/string.rst:838
+msgid ""
+"Advanced usage: you can derive subclasses of :class:`Template` to customize "
+"the placeholder syntax, delimiter character, or the entire regular "
+"expression used to parse template strings.  To do this, you can override "
+"these class attributes:"
+msgstr ""
+"Uso avanzado: es posible derivar subclases de :class:`Template` para "
+"personalizar la sintaxis de *placeholder*, caracteres de delimitación, o "
+"bien la expresión regular entera usada para procesar cadenas de plantillas. "
+"Para ello, es posible sobrescribir los siguientes atributos de clase:"
+
+#: ../Doc/library/string.rst:843
+msgid ""
+"*delimiter* -- This is the literal string describing a placeholder "
+"introducing delimiter.  The default value is ``$``.  Note that this should "
+"*not* be a regular expression, as the implementation will call :meth:`re."
+"escape` on this string as needed.  Note further that you cannot change the "
+"delimiter after class creation (i.e. a different delimiter must be set in "
+"the subclass's class namespace)."
+msgstr ""
+"*delimiter*: es la cadena de caracteres literal que describe al delimitador "
+"que introduce un comodín.  El valor predeterminado es ``$``.  Notar que esto "
+"*no debe* ser una expresión regular, ya que la implementación llamará a :"
+"meth:`re.escape` en esta cadena de caracteres según sea necesario.  Tener en "
+"cuenta además, que se no puede cambiar el delimitador después haber creado "
+"la clase (es decir, se debe establecer un delimitador diferente en el "
+"espacio de nombres de la subclase)."
+
+#: ../Doc/library/string.rst:850
+msgid ""
+"*idpattern* -- This is the regular expression describing the pattern for non-"
+"braced placeholders.  The default value is the regular expression ``(?a:[_a-"
+"z][_a-z0-9]*)``.  If this is given and *braceidpattern* is ``None`` this "
+"pattern will also apply to braced placeholders."
+msgstr ""
+"*idpattern* -- Esta es la expresión regular que describe el patrón para "
+"comodines fuera de las llaves.  El valor predeterminado es la expresión "
+"regular ``(?a:[_a-z][_a-z0-9]*)``.  Si se proporciona este argumento y "
+"*braceidpattern* es ``None`` este patrón también se aplicará a los comodines "
+"entre llaves."
+
+#: ../Doc/library/string.rst:857
+msgid ""
+"Since default *flags* is ``re.IGNORECASE``, pattern ``[a-z]`` can match with "
+"some non-ASCII characters. That's why we use the local ``a`` flag here."
+msgstr ""
+"Dado que el valor predeterminado de *flags* es ``re.IGNORECASE``, el patrón "
+"``[a-z]`` puede coincidir con algunos caracteres que no son ASCII. Por ello "
+"se utiliza aquí la bandera local ``a``."
+
+#: ../Doc/library/string.rst:861
+msgid ""
+"*braceidpattern* can be used to define separate patterns used inside and "
+"outside the braces."
+msgstr ""
+"*braceidpattern* puede ser usado para definir patrones separados, usados "
+"dentro y fuera de los corchetes."
+
+#: ../Doc/library/string.rst:865
+msgid ""
+"*braceidpattern* -- This is like *idpattern* but describes the pattern for "
+"braced placeholders.  Defaults to ``None`` which means to fall back to "
+"*idpattern* (i.e. the same pattern is used both inside and outside braces). "
+"If given, this allows you to define different patterns for braced and "
+"unbraced placeholders."
+msgstr ""
+"*braceidpattern* -- Es como *idpattern* pero describe el patrón para "
+"comodines entre llaves.  El valor por defecto es ``None``, lo que significa "
+"volver a *idpattern* (es decir, el mismo patrón se utiliza tanto dentro como "
+"fuera de las llaves). Si se proporciona, esto le permite definir diferentes "
+"patrones para comodines dentro y fuera de las llaves."
+
+#: ../Doc/library/string.rst:873
+msgid ""
+"*flags* -- The regular expression flags that will be applied when compiling "
+"the regular expression used for recognizing substitutions.  The default "
+"value is ``re.IGNORECASE``.  Note that ``re.VERBOSE`` will always be added "
+"to the flags, so custom *idpattern*\\ s must follow conventions for verbose "
+"regular expressions."
+msgstr ""
+"*flags* -- Banderas de expresión regular que se aplicarán al compilar la "
+"expresión regular utilizada para reconocer sustituciones.  El valor por "
+"defecto es ``re.IGNORECASE``.  Téngase en cuenta que ``re.VERBOSE`` siempre "
+"se agregará a las banderas, por lo que *idpattern* (s) personalizado(s) "
+"debe(n) seguir las convenciones de expresiones regulares detalladas."
+
+#: ../Doc/library/string.rst:881
+msgid ""
+"Alternatively, you can provide the entire regular expression pattern by "
+"overriding the class attribute *pattern*.  If you do this, the value must be "
+"a regular expression object with four named capturing groups.  The capturing "
+"groups correspond to the rules given above, along with the invalid "
+"placeholder rule:"
+msgstr ""
+"Como alternativa, se puede proporcionar el patrón de expresión regular "
+"completo, reemplazando así el atributo de clase *pattern*.  Si eso ocurre, "
+"el valor debe ser un objeto de expresión regular con cuatro grupos de "
+"captura con nombre.  Los grupos de captura corresponden a las reglas "
+"indicadas anteriormente, junto con la regla de marcador de posición no "
+"válida:"
+
+#: ../Doc/library/string.rst:887
+msgid ""
+"*escaped* -- This group matches the escape sequence, e.g. ``$$``, in the "
+"default pattern."
+msgstr ""
+"*escaped* -- Este grupo coincide con la secuencia de escape en el patrón "
+"predeterminado, por ejemplo, ``$$``."
+
+#: ../Doc/library/string.rst:890
+msgid ""
+"*named* -- This group matches the unbraced placeholder name; it should not "
+"include the delimiter in capturing group."
+msgstr ""
+"*named* -- Este grupo coincide con el nombre comodín fuera de las llaves. No "
+"debe incluir el delimitador del grupo de captura."
+
+#: ../Doc/library/string.rst:893
+msgid ""
+"*braced* -- This group matches the brace enclosed placeholder name; it "
+"should not include either the delimiter or braces in the capturing group."
+msgstr ""
+"*braced* -- Este grupo coincide con el nombre del comodín adjunto; no debe "
+"incluir ni el delimitador ni las llaves en el grupo de captura."
+
+#: ../Doc/library/string.rst:896
+msgid ""
+"*invalid* -- This group matches any other delimiter pattern (usually a "
+"single delimiter), and it should appear last in the regular expression."
+msgstr ""
+"*invalid* -- Este grupo se empareja con cualquier otro patrón de "
+"delimitación (usualmente un único carácter) y debe ser lo último en aparecer "
+"en la expresión regular."
+
+#: ../Doc/library/string.rst:899
+msgid ""
+"The methods on this class will raise :exc:`ValueError` if the pattern "
+"matches the template without one of these named groups matching."
+msgstr ""
+"Los métodos de esta clase generarán :exc:`ValueError` si el patrón coincide "
+"con la plantilla sin que coincida uno de estos grupos nombrados."
+
+#: ../Doc/library/string.rst:904
+msgid "Helper functions"
+msgstr "Funciones de ayuda"
+
+#: ../Doc/library/string.rst:908
+msgid ""
+"Split the argument into words using :meth:`str.split`, capitalize each word "
+"using :meth:`str.capitalize`, and join the capitalized words using :meth:"
+"`str.join`.  If the optional second argument *sep* is absent or ``None``, "
+"runs of whitespace characters are replaced by a single space and leading and "
+"trailing whitespace are removed, otherwise *sep* is used to split and join "
+"the words."
+msgstr ""
+"Separa el argumento en dos palabras utilizando el método :meth:`str.split`, "
+"convierte a mayúsculas vía :meth:`str.capitalize` y une las palabras en "
+"mayúscula con el método :meth:`str.join`. Si el segundo argumento opcional "
+"*sep* está ausente o es ``None``, los espacios en blanco se reemplazarán con "
+"un único espacio y los espacios en blanco iniciales y finales se eliminarán; "
+"caso contrario, *sep* se usa para separar y unir las palabras."

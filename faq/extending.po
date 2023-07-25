@@ -1,0 +1,496 @@
+# Copyright (C) 2001-2020, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to
+# get the list of volunteers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 19:47+0200\n"
+"PO-Revision-Date: 2021-08-02 11:16+0200\n"
+"Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
+"Language: es_AR\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../Doc/faq/extending.rst:3
+msgid "Extending/Embedding FAQ"
+msgstr "Extendiendo/Embebiendo FAQ"
+
+#: ../Doc/faq/extending.rst:6
+msgid "Contents"
+msgstr "Contenidos"
+
+#: ../Doc/faq/extending.rst:16
+msgid "Can I create my own functions in C?"
+msgstr "¿Puedo crear mis propias funciones en C?"
+
+#: ../Doc/faq/extending.rst:18
+msgid ""
+"Yes, you can create built-in modules containing functions, variables, "
+"exceptions and even new types in C.  This is explained in the document :ref:"
+"`extending-index`."
+msgstr ""
+"Si, puedes crear módulos incorporados que contengan funciones, variables, "
+"excepciones y incluso nuevos tipos en C. Esto esta explicado en el "
+"documento :ref:`extending-index`."
+
+#: ../Doc/faq/extending.rst:22
+msgid "Most intermediate or advanced Python books will also cover this topic."
+msgstr ""
+"La mayoría de los libros intermedios o avanzados de Python también tratan "
+"este tema."
+
+#: ../Doc/faq/extending.rst:26
+msgid "Can I create my own functions in C++?"
+msgstr "¿Puedo crear mis propias funciones en C++?"
+
+#: ../Doc/faq/extending.rst:28
+msgid ""
+"Yes, using the C compatibility features found in C++.  Place ``extern "
+"\"C\" { ... }`` around the Python include files and put ``extern \"C\"`` "
+"before each function that is going to be called by the Python interpreter.  "
+"Global or static C++ objects with constructors are probably not a good idea."
+msgstr ""
+"Si, utilizando las características de compatibilidad encontradas en C++. "
+"Coloca ``extern \"C\" { ... }`` alrededor los archivos incluidos Python y "
+"pon ``extern \"C\"`` antes de cada función que será llamada por el "
+"interprete Python. Objetos globales o estáticos C++ con constructores no son "
+"una buena idea seguramente."
+
+#: ../Doc/faq/extending.rst:37
+msgid "Writing C is hard; are there any alternatives?"
+msgstr "Escribir en C es difícil; ¿no hay otra alternativa?"
+
+#: ../Doc/faq/extending.rst:39
+msgid ""
+"There are a number of alternatives to writing your own C extensions, "
+"depending on what you're trying to do."
+msgstr ""
+"Hay un número de alternativas a escribir tus propias extensiones C, "
+"dependiendo en que estés tratando de hacer."
+
+#: ../Doc/faq/extending.rst:44
+#, fuzzy
+msgid ""
+"`Cython <https://cython.org>`_ and its relative `Pyrex <https://www.cosc."
+"canterbury.ac.nz/greg.ewing/python/Pyrex/>`_ are compilers that accept a "
+"slightly modified form of Python and generate the corresponding C code.  "
+"Cython and Pyrex make it possible to write an extension without having to "
+"learn Python's C API."
+msgstr ""
+"`Cython <http://cython.org>`_ y su relativo `Pyrex <https://www.cosc."
+"canterbury.ac.nz/greg.ewing/python/Pyrex/>`_ son compiladores que aceptan "
+"una forma de Python ligeramente modificada y generan el código C "
+"correspondiente. Cython y *Pyrex* hacen posible escribir una extensión sin "
+"tener que aprender la API de Python C."
+
+#: ../Doc/faq/extending.rst:50
+#, fuzzy
+msgid ""
+"If you need to interface to some C or C++ library for which no Python "
+"extension currently exists, you can try wrapping the library's data types "
+"and functions with a tool such as `SWIG <https://www.swig.org>`_.  `SIP "
+"<https://riverbankcomputing.com/software/sip/intro>`__, `CXX <https://cxx."
+"sourceforge.net/>`_ `Boost <https://www.boost.org/libs/python/doc/index."
+"html>`_, or `Weave <https://github.com/scipy/weave>`_ are also alternatives "
+"for wrapping C++ libraries."
+msgstr ""
+"Si necesitas hacer una interfaz a alguna biblioteca C o C++ que no posee aún "
+"extensión Python, puedes intentar empaquetar los tipo de datos de la "
+"biblioteca con una herramienta como `SWIG <http://www.swig.org>`_.  `SIP "
+"<https://riverbankcomputing.com/software/sip/intro>`__, `CXX <http://cxx."
+"sourceforge.net/>`_ `Boost <http://www.boost.org/libs/python/doc/index."
+"html>`_, o `Weave <https://github.com/scipy/weave>`_ también son "
+"alternativas para empaquetar bibliotecas C++."
+
+#: ../Doc/faq/extending.rst:61
+msgid "How can I execute arbitrary Python statements from C?"
+msgstr "¿Cómo puedo ejecutar declaraciones arbitrarias de Python desde C?"
+
+#: ../Doc/faq/extending.rst:63
+msgid ""
+"The highest-level function to do this is :c:func:`PyRun_SimpleString` which "
+"takes a single string argument to be executed in the context of the module "
+"``__main__`` and returns ``0`` for success and ``-1`` when an exception "
+"occurred (including :exc:`SyntaxError`).  If you want more control, use :c:"
+"func:`PyRun_String`; see the source for :c:func:`PyRun_SimpleString` in "
+"``Python/pythonrun.c``."
+msgstr ""
+"La función de más alto nivel para hacer esto es :c:func:`PyRun_SimpleString` "
+"que toma un solo argumento de cadena de caracteres para ser ejecutado en el "
+"contexto del módulo ``__main__`` y retorna ``0`` si tiene éxito y ``-1`` "
+"cuando ocurre una excepción (incluyendo :exc:`SyntaxError`). Si quieres mas "
+"control, usa :c:func:`PyRun_String`; mira la fuente para :c:func:"
+"`PyRun_SimpleString` en ``Python/pythonrun.c``."
+
+#: ../Doc/faq/extending.rst:72
+msgid "How can I evaluate an arbitrary Python expression from C?"
+msgstr "¿Cómo puedo evaluar una expresión arbitraria de Python desde C?"
+
+#: ../Doc/faq/extending.rst:74
+msgid ""
+"Call the function :c:func:`PyRun_String` from the previous question with the "
+"start symbol :c:data:`Py_eval_input`; it parses an expression, evaluates it "
+"and returns its value."
+msgstr ""
+"Llama a la función :c:func:`PyRun_String` de la pregunta anterior con el "
+"símbolo de comienzo :c:data:`Py_eval_input`; analiza una expresión, evalúa y "
+"retorna su valor."
+
+#: ../Doc/faq/extending.rst:80
+msgid "How do I extract C values from a Python object?"
+msgstr "¿Cómo extraigo valores C de un objeto Python?"
+
+#: ../Doc/faq/extending.rst:82
+msgid ""
+"That depends on the object's type.  If it's a tuple, :c:func:`PyTuple_Size` "
+"returns its length and :c:func:`PyTuple_GetItem` returns the item at a "
+"specified index.  Lists have similar functions, :c:func:`PyListSize` and :c:"
+"func:`PyList_GetItem`."
+msgstr ""
+"Eso depende del tipo de objeto. Si es una tupla, :c:func:`PyTuple_Size` "
+"retorna su tamaño, y :c:func:`PyTuple_GetItem` retorna el ítem del índice "
+"especificado. Las listas tienen funciones similares, :c:func:`PyListSize` "
+"and :c:func:`PyList_GetItem`."
+
+#: ../Doc/faq/extending.rst:87
+msgid ""
+"For bytes, :c:func:`PyBytes_Size` returns its length and :c:func:"
+"`PyBytes_AsStringAndSize` provides a pointer to its value and its length.  "
+"Note that Python bytes objects may contain null bytes so C's :c:func:"
+"`strlen` should not be used."
+msgstr ""
+"Para bytes :c:func:`PyBytes_Size` retorna su tamaño, y :c:func:"
+"`PyBytes_AsStringAndSize` proporciona un puntero a su valor y tamaño. Nota "
+"que los objetos byte de Python pueden contener bytes *null* por lo que la "
+"función de C :c:func:`strlen` no debe ser utilizada."
+
+#: ../Doc/faq/extending.rst:92
+msgid ""
+"To test the type of an object, first make sure it isn't ``NULL``, and then "
+"use :c:func:`PyBytes_Check`, :c:func:`PyTuple_Check`, :c:func:"
+"`PyList_Check`, etc."
+msgstr ""
+"Para testear el tipo de un objeto, primero debes estar seguro que no es "
+"``NULL``, y luego usa :c:func:`PyBytes_Check`, :c:func:`PyTuple_Check`, :c:"
+"func:`PyList_Check`, etc."
+
+#: ../Doc/faq/extending.rst:95
+msgid ""
+"There is also a high-level API to Python objects which is provided by the so-"
+"called 'abstract' interface -- read ``Include/abstract.h`` for further "
+"details.  It allows interfacing with any kind of Python sequence using calls "
+"like :c:func:`PySequence_Length`, :c:func:`PySequence_GetItem`, etc. as well "
+"as many other useful protocols such as numbers (:c:func:`PyNumber_Index` et "
+"al.) and mappings in the PyMapping APIs."
+msgstr ""
+"También hay una API de alto nivel para objetos Python que son provistos por "
+"la supuestamente llamada interfaz 'abstracta' -- lee ``Include/abstract.h`` "
+"para mas detalles. Permite realizar una interfaz con cualquier tipo de "
+"secuencia Python usando llamadas como :c:func:`PySequence_Length`, :c:func:"
+"`PySequence_GetItem`, etc. así como otros protocolos útiles como números (:c:"
+"func:`PyNumber_Index` et al.) y mapeos en las *PyMapping APIs*."
+
+#: ../Doc/faq/extending.rst:104
+msgid "How do I use Py_BuildValue() to create a tuple of arbitrary length?"
+msgstr ""
+"¿Cómo utilizo Py_BuildValue() para crear una tupla de un tamaño arbitrario?"
+
+#: ../Doc/faq/extending.rst:106
+msgid "You can't.  Use :c:func:`PyTuple_Pack` instead."
+msgstr "No puedes hacerlo. Utiliza a cambio :c:func:`PyTuple_Pack`."
+
+#: ../Doc/faq/extending.rst:110
+msgid "How do I call an object's method from C?"
+msgstr "¿Cómo puedo llamar un método de un objeto desde C?"
+
+#: ../Doc/faq/extending.rst:112
+msgid ""
+"The :c:func:`PyObject_CallMethod` function can be used to call an arbitrary "
+"method of an object.  The parameters are the object, the name of the method "
+"to call, a format string like that used with :c:func:`Py_BuildValue`, and "
+"the argument values::"
+msgstr ""
+"Se puede utilizar la función :c:func:`PyObject_CallMethod` para llamar a un "
+"método arbitrario de un objeto. Los parámetros son el objeto, el nombre del "
+"método a llamar, una cadena de caracteres de formato como las usadas con  :c:"
+"func:`Py_BuildValue`, y los valores de argumento ::"
+
+#: ../Doc/faq/extending.rst:121
+msgid ""
+"This works for any object that has methods -- whether built-in or user-"
+"defined. You are responsible for eventually :c:func:`Py_DECREF`\\ 'ing the "
+"return value."
+msgstr ""
+"Esto funciona para cualquier objeto que tenga métodos -- sean estos "
+"incorporados o definidos por el usuario. Eres responsable si eventualmente "
+"usas :c:func:`Py_DECREF` en el valor de retorno."
+
+#: ../Doc/faq/extending.rst:124
+msgid ""
+"To call, e.g., a file object's \"seek\" method with arguments 10, 0 "
+"(assuming the file object pointer is \"f\")::"
+msgstr ""
+"Para llamar, por ejemplo, un método \"seek\" de un objeto archivo con "
+"argumentos 10, 0 (considerando que puntero del objeto archivo es \"f\")::"
+
+#: ../Doc/faq/extending.rst:135
+msgid ""
+"Note that since :c:func:`PyObject_CallObject` *always* wants a tuple for the "
+"argument list, to call a function without arguments, pass \"()\" for the "
+"format, and to call a function with one argument, surround the argument in "
+"parentheses, e.g. \"(i)\"."
+msgstr ""
+"Note que debido a :c:func:`PyObject_CallObject` *siempre* necesita una tupla "
+"para la lista de argumento, para llamar una función sin argumentos, deberás "
+"pasar \"()\" para el formato, y para llamar a una función con un solo "
+"argumento, encierra el argumento entre paréntesis, por ejemplo \"(i)\"."
+
+#: ../Doc/faq/extending.rst:142
+msgid ""
+"How do I catch the output from PyErr_Print() (or anything that prints to "
+"stdout/stderr)?"
+msgstr ""
+"¿Cómo obtengo la salida de PyErr_Print() (o cualquier cosa que se imprime a "
+"stdout/stderr)?"
+
+#: ../Doc/faq/extending.rst:144
+msgid ""
+"In Python code, define an object that supports the ``write()`` method.  "
+"Assign this object to :data:`sys.stdout` and :data:`sys.stderr`.  Call "
+"print_error, or just allow the standard traceback mechanism to work. Then, "
+"the output will go wherever your ``write()`` method sends it."
+msgstr ""
+"En código Python, define un objeto que soporta el método ``write()``. Asigna "
+"este objeto a :data:`sys.stdout` y :data:`sys.stderr`. Llama a print_error, "
+"o solo permite que el mecanismo estándar de rastreo funcione. Luego, la "
+"salida se hará cuando invoques ``write()``."
+
+#: ../Doc/faq/extending.rst:149
+msgid "The easiest way to do this is to use the :class:`io.StringIO` class:"
+msgstr ""
+"La manera mas fácil de hacer esto es usar la clase :class:`io.StringIO`:"
+
+#: ../Doc/faq/extending.rst:161
+msgid "A custom object to do the same would look like this:"
+msgstr "Un objeto personalizado para hacer lo mismo se vería así:"
+
+#: ../Doc/faq/extending.rst:182
+msgid "How do I access a module written in Python from C?"
+msgstr "¿Cómo accedo al módulo escrito en Python desde C?"
+
+#: ../Doc/faq/extending.rst:184
+msgid "You can get a pointer to the module object as follows::"
+msgstr "Puedes obtener un puntero al módulo objeto de esta manera:"
+
+#: ../Doc/faq/extending.rst:188
+msgid ""
+"If the module hasn't been imported yet (i.e. it is not yet present in :data:"
+"`sys.modules`), this initializes the module; otherwise it simply returns the "
+"value of ``sys.modules[\"<modulename>\"]``.  Note that it doesn't enter the "
+"module into any namespace -- it only ensures it has been initialized and is "
+"stored in :data:`sys.modules`."
+msgstr ""
+"Si el módulo todavía no se importó, (por ejemplo aún no esta presente en :"
+"data:`sys.modules`), esto inicializa el módulo, de otra forma simplemente "
+"retorna el valor de ``sys.modules[\"<modulename>\"]``. Nota que no entra el "
+"módulo a ningún espacio de nombres (*namespace*) --solo asegura que fue "
+"inicializado y guardado en :data:`sys.modules`."
+
+#: ../Doc/faq/extending.rst:194
+msgid ""
+"You can then access the module's attributes (i.e. any name defined in the "
+"module) as follows::"
+msgstr ""
+"Puedes acceder luego a los atributos del módulo (por ejemplo a cualquier "
+"nombre definido en el módulo) de esta forma:"
+
+#: ../Doc/faq/extending.rst:199
+msgid ""
+"Calling :c:func:`PyObject_SetAttrString` to assign to variables in the "
+"module also works."
+msgstr ""
+"También funciona llamar a :c:func:`PyObject_SetAttrString` para asignar a "
+"variables en el módulo."
+
+#: ../Doc/faq/extending.rst:204
+msgid "How do I interface to C++ objects from Python?"
+msgstr "¿Cómo hago una interface a objetos C++ desde Python?"
+
+#: ../Doc/faq/extending.rst:206
+msgid ""
+"Depending on your requirements, there are many approaches.  To do this "
+"manually, begin by reading :ref:`the \"Extending and Embedding\" document "
+"<extending-index>`.  Realize that for the Python run-time system, there "
+"isn't a whole lot of difference between C and C++ -- so the strategy of "
+"building a new Python type around a C structure (pointer) type will also "
+"work for C++ objects."
+msgstr ""
+"Dependiendo de lo que necesites, hay varias maneras de hacerlo. Para hacerlo "
+"manualmente empieza por leer :ref:`the \"Extending and Embedding\" document "
+"<extending-index>`.Fíjate que para el sistema de tiempo de ejecución Python, "
+"no hay una gran diferencia entre C y C++, por lo que la estrategia de "
+"construir un nuevo tipo Python alrededor de una estructura de C de tipo "
+"puntero, también funcionará para objetos C++."
+
+#: ../Doc/faq/extending.rst:212
+msgid "For C++ libraries, see :ref:`c-wrapper-software`."
+msgstr "Para bibliotecas C++, mira :ref:`c-wrapper-software`."
+
+#: ../Doc/faq/extending.rst:216
+msgid "I added a module using the Setup file and the make fails; why?"
+msgstr ""
+"He agregado un módulo usando el archivo de configuración y el *make* falla. "
+"¿Porque?"
+
+#: ../Doc/faq/extending.rst:218
+msgid ""
+"Setup must end in a newline, if there is no newline there, the build process "
+"fails.  (Fixing this requires some ugly shell script hackery, and this bug "
+"is so minor that it doesn't seem worth the effort.)"
+msgstr ""
+"La configuración debe terminar en una nueva linea, si esta no está, entonces "
+"el proceso *build* falla. (reparar esto requiere algún truco de linea de "
+"comandos que puede ser no muy prolijo, y seguramente el error es tan pequeño "
+"que no valdrá el esfuerzo.)"
+
+#: ../Doc/faq/extending.rst:224
+msgid "How do I debug an extension?"
+msgstr "¿Cómo puedo depurar una extensión?"
+
+#: ../Doc/faq/extending.rst:226
+msgid ""
+"When using GDB with dynamically loaded extensions, you can't set a "
+"breakpoint in your extension until your extension is loaded."
+msgstr ""
+"Cuando se usa GDB con extensiones cargadas de forma dinámica, puedes "
+"configurar un punto de verificación (*breakpoint*) en tu extensión hasta que "
+"esta se cargue."
+
+#: ../Doc/faq/extending.rst:229
+msgid "In your ``.gdbinit`` file (or interactively), add the command:"
+msgstr "En tu archivo ``.gdbinit`` (o interactivamente), agrega el comando:"
+
+#: ../Doc/faq/extending.rst:235
+msgid "Then, when you run GDB:"
+msgstr "Luego, cuando corras GDB:"
+
+#: ../Doc/faq/extending.rst:247
+msgid ""
+"I want to compile a Python module on my Linux system, but some files are "
+"missing. Why?"
+msgstr ""
+"Quiero compilar un módulo Python en mi sistema Linux, pero me faltan algunos "
+"archivos . ¿Por qué?"
+
+#: ../Doc/faq/extending.rst:249
+msgid ""
+"Most packaged versions of Python don't include the :file:`/usr/lib/python2."
+"{x}/config/` directory, which contains various files required for compiling "
+"Python extensions."
+msgstr ""
+"La mayoría de las versiones empaquetadas de Python no incluyen el "
+"directorio :file:`/usr/lib/python2.{x}/config/`, que contiene varios "
+"archivos que son necesarios para compilar las extensiones Python."
+
+#: ../Doc/faq/extending.rst:253
+msgid "For Red Hat, install the python-devel RPM to get the necessary files."
+msgstr ""
+"Para *Red Hat*, instala el *python-devel RPM* para obtener los archivos "
+"necesarios."
+
+#: ../Doc/faq/extending.rst:255
+msgid "For Debian, run ``apt-get install python-dev``."
+msgstr "Para Debian, corre ``apt-get install python-dev``."
+
+#: ../Doc/faq/extending.rst:258
+msgid "How do I tell \"incomplete input\" from \"invalid input\"?"
+msgstr "¿Cómo digo \"entrada incompleta\" desde \"entrada inválida\"?"
+
+#: ../Doc/faq/extending.rst:260
+msgid ""
+"Sometimes you want to emulate the Python interactive interpreter's behavior, "
+"where it gives you a continuation prompt when the input is incomplete (e.g. "
+"you typed the start of an \"if\" statement or you didn't close your "
+"parentheses or triple string quotes), but it gives you a syntax error "
+"message immediately when the input is invalid."
+msgstr ""
+"A veces quieres emular el comportamiento del interprete interactivo de "
+"Python, que te da una continuación del *prompt* cuando la entrada esta "
+"incompleta (por ejemplo si comenzaste tu instrucción \"if\" o no cerraste un "
+"paréntesis o triples comillas), pero te da un mensaje de error de sintaxis "
+"inmediatamente cuando la entrada es invalida."
+
+#: ../Doc/faq/extending.rst:266
+msgid ""
+"In Python you can use the :mod:`codeop` module, which approximates the "
+"parser's behavior sufficiently.  IDLE uses this, for example."
+msgstr ""
+"En Python puedes usar el módulo :mod:`codeop`, que aproxima el "
+"comportamiento del analizador gramatical (*parser*) . IDLE usa esto, por "
+"ejemplo."
+
+#: ../Doc/faq/extending.rst:269
+msgid ""
+"The easiest way to do it in C is to call :c:func:`PyRun_InteractiveLoop` "
+"(perhaps in a separate thread) and let the Python interpreter handle the "
+"input for you. You can also set the :c:func:`PyOS_ReadlineFunctionPointer` "
+"to point at your custom input function. See ``Modules/readline.c`` and "
+"``Parser/myreadline.c`` for more hints."
+msgstr ""
+"La manera mas fácil de hacerlo en C es llamar a :c:func:"
+"`PyRun_InteractiveLoop` (quizá en un hilo separado) y dejar que el "
+"interprete Python gestione la entrada por ti. Puedes también configurar :c:"
+"func:`PyOS_ReadlineFunctionPointer` para apuntar a tu función de entrada "
+"personalizada."
+
+#: ../Doc/faq/extending.rst:276
+msgid "How do I find undefined g++ symbols __builtin_new or __pure_virtual?"
+msgstr "¿Cómo encuentro símbolos g++ __builtin_new o __pure_virtual?"
+
+#: ../Doc/faq/extending.rst:278
+msgid ""
+"To dynamically load g++ extension modules, you must recompile Python, relink "
+"it using g++ (change LINKCC in the Python Modules Makefile), and link your "
+"extension module using g++ (e.g., ``g++ -shared -o mymodule.so mymodule.o``)."
+msgstr ""
+"Para cargar dinámicamente módulos de extensión g++, debes recompilar Python, "
+"hacer un nuevo *link* usando g++ (cambia LINKCC en el Python Modules "
+"Makefile) y enlaza *link* tu extensión usando g++ (por ejemplo ``g++ -shared "
+"-o mymodule.so mymodule.o``)."
+
+#: ../Doc/faq/extending.rst:284
+msgid ""
+"Can I create an object class with some methods implemented in C and others "
+"in Python (e.g. through inheritance)?"
+msgstr ""
+"¿Puedo crear una clase objeto con algunos métodos implementado en C y otros "
+"en Python (por ejemplo a través de la herencia)?"
+
+#: ../Doc/faq/extending.rst:286
+msgid ""
+"Yes, you can inherit from built-in classes such as :class:`int`, :class:"
+"`list`, :class:`dict`, etc."
+msgstr ""
+"Si, puedes heredar de clases integradas como :class:`int`, :class:`list`, :"
+"class:`dict`, etc."
+
+#: ../Doc/faq/extending.rst:289
+#, fuzzy
+msgid ""
+"The Boost Python Library (BPL, https://www.boost.org/libs/python/doc/index."
+"html) provides a way of doing this from C++ (i.e. you can inherit from an "
+"extension class written in C++ using the BPL)."
+msgstr ""
+"La biblioteca *Boost Pyhton* (BPL, http://www.boost.org/libs/python/doc/"
+"index.html) provee una manera de realizar esto desde C++ (por ejemplo puedes "
+"heredar de una clase extensión escrita en C++ usando el BPL)."

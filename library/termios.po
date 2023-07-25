@@ -1,0 +1,189 @@
+# Copyright (C) 2001-2020, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 19:47+0200\n"
+"PO-Revision-Date: 2020-10-27 19:25-0500\n"
+"Last-Translator: \n"
+"Language: es_CO\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../Doc/library/termios.rst:2
+msgid ":mod:`termios` --- POSIX style tty control"
+msgstr ":mod:`termios` ---Control tty estilo POSIX"
+
+#: ../Doc/library/termios.rst:14
+msgid ""
+"This module provides an interface to the POSIX calls for tty I/O control. "
+"For a complete description of these calls, see :manpage:`termios(3)` Unix "
+"manual page.  It is only available for those Unix versions that support "
+"POSIX *termios* style tty I/O control configured during installation."
+msgstr ""
+"Este módulo proporciona una interfaz para las llamadas POSIX para el control "
+"de E/S (entrada/salida) tty. Para obtener una descripción completa de estas "
+"llamadas, consulte :manpage:`termios (3)` Página de manual de Unix. Solo "
+"está disponible para aquellas versiones de Unix que admitan el control de E/"
+"S tty estilo POSIX *termios* configurado durante la instalación."
+
+#: ../Doc/library/termios.rst:19
+msgid ""
+"All functions in this module take a file descriptor *fd* as their first "
+"argument.  This can be an integer file descriptor, such as returned by ``sys."
+"stdin.fileno()``, or a :term:`file object`, such as ``sys.stdin`` itself."
+msgstr ""
+"Todas las funciones de este módulo toman un descriptor de archivo *fd* como "
+"primer argumento. Puede ser un descriptor de archivo entero, como el que "
+"retorna ``sys.stdin.fileno()``, o un :term:`file object`, como el propio "
+"``sys.stdin``."
+
+#: ../Doc/library/termios.rst:23
+msgid ""
+"This module also defines all the constants needed to work with the functions "
+"provided here; these have the same name as their counterparts in C.  Please "
+"refer to your system documentation for more information on using these "
+"terminal control interfaces."
+msgstr ""
+"Este módulo también define todas las constantes necesarias para trabajar con "
+"las funciones proporcionadas aquí; tienen el mismo nombre que sus "
+"contrapartes en C. Consulte la documentación de su sistema para obtener más "
+"información sobre el uso de estas interfaces de control de terminal."
+
+#: ../Doc/library/termios.rst:28
+msgid "The module defines the following functions:"
+msgstr "El módulo define las siguientes funciones:"
+
+#: ../Doc/library/termios.rst:33
+msgid ""
+"Return a list containing the tty attributes for file descriptor *fd*, as "
+"follows: ``[iflag, oflag, cflag, lflag, ispeed, ospeed, cc]`` where *cc* is "
+"a list of the tty special characters (each a string of length 1, except the "
+"items with indices :const:`VMIN` and :const:`VTIME`, which are integers when "
+"these fields are defined).  The interpretation of the flags and the speeds "
+"as well as the indexing in the *cc* array must be done using the symbolic "
+"constants defined in the :mod:`termios` module."
+msgstr ""
+"Retorna una lista que contiene los atributos tty para el descriptor de "
+"archivo *fd*, como se muestra a continuación: ``[iflag, oflag, cflag, lflag, "
+"ispeed, ospeed, cc]`` donde *cc* es una lista de los caracteres especiales "
+"tty (cada una es una cadena de longitud 1, excepto los elementos con "
+"índices :const:`VMIN` and :const:`VTIME`, que son números enteros cuando se "
+"definen estos campos). La interpretación de las banderas y las velocidades, "
+"así como la indexación en el arreglo *cc*, debe realizarse utilizando las "
+"constantes simbólicas definidas en el módulo  :mod:`termios` ."
+
+#: ../Doc/library/termios.rst:44
+msgid ""
+"Set the tty attributes for file descriptor *fd* from the *attributes*, which "
+"is a list like the one returned by :func:`tcgetattr`.  The *when* argument "
+"determines when the attributes are changed: :const:`TCSANOW` to change "
+"immediately, :const:`TCSADRAIN` to change after transmitting all queued "
+"output, or :const:`TCSAFLUSH` to change after transmitting all queued output "
+"and discarding all queued input."
+msgstr ""
+"Establezca los atributos tty para el descriptor de archivo *fd* de los "
+"*atributos*, que es una lista como la retornada por :func:`tcgetattr`.  El "
+"argumento *when* determina cuándo se cambian los atributos: :const:`TCSANOW` "
+"para cambiar inmediatamente,  :const:`TCSADRAIN` para cambiar después de "
+"transmitir toda la salida en cola, o :const:`TCSAFLUSH` para cambiar después "
+"de transmitir toda la salida en cola y descartar toda la entrada en cola."
+
+#: ../Doc/library/termios.rst:54
+msgid ""
+"Send a break on file descriptor *fd*.  A zero *duration* sends a break for "
+"0.25--0.5 seconds; a nonzero *duration* has a system dependent meaning."
+msgstr ""
+"Envíe una pausa en el descriptor de archivo *fd*. Una *duración* cero envía "
+"una pausa de 0.25 a 0.5 segundos;  una *duración* distinta de cero tiene un "
+"significado dependiente del sistema."
+
+#: ../Doc/library/termios.rst:60
+msgid ""
+"Wait until all output written to file descriptor *fd* has been transmitted."
+msgstr ""
+"Espere hasta que se haya transmitido toda la salida escrita en el descriptor "
+"de archivo *fd*."
+
+#: ../Doc/library/termios.rst:65
+msgid ""
+"Discard queued data on file descriptor *fd*.  The *queue* selector specifies "
+"which queue: :const:`TCIFLUSH` for the input queue, :const:`TCOFLUSH` for "
+"the output queue, or :const:`TCIOFLUSH` for both queues."
+msgstr ""
+"Descartar datos en cola en el descriptor de archivo *fd*. El selector "
+"*queue* especifica qué cola: :const:`TCIFLUSH` para la cola de entrada, :"
+"const:`TCOFLUSH` para la cola de salida, o :const:`TCIOFLUSH` para ambas "
+"colas."
+
+#: ../Doc/library/termios.rst:72
+msgid ""
+"Suspend or resume input or output on file descriptor *fd*.  The *action* "
+"argument can be :const:`TCOOFF` to suspend output, :const:`TCOON` to restart "
+"output, :const:`TCIOFF` to suspend input, or :const:`TCION` to restart input."
+msgstr ""
+"Suspender o reanudar la entrada o salida en el descriptor de archivo *fd*. "
+"El argumento *action* puede ser  :const:`TCOOFF` para suspender la salida, :"
+"const:`TCOON` para reiniciar la salida, :const:`TCIOFF` para suspender la "
+"entrada, o :const:`TCION` para reiniciar la entrada."
+
+#: ../Doc/library/termios.rst:79
+msgid ""
+"Return a tuple ``(ws_row, ws_col)`` containing the tty window size for file "
+"descriptor *fd*. Requires :const:`termios.TIOCGWINSZ` or :const:`termios."
+"TIOCGSIZE`."
+msgstr ""
+"Devuelve una tupla ``(ws_row, ws_col)`` que contiene el tamaño de la ventana "
+"tty para el descriptor de archivo *fd*. Requiere :const:`termios.TIOCGWINSZ` "
+"o :const:`termios.TIOCGSIZE`."
+
+#: ../Doc/library/termios.rst:88
+msgid ""
+"Set the tty window size for file descriptor *fd* from *winsize*, which is a "
+"two-item tuple ``(ws_row, ws_col)`` like the one returned by :func:"
+"`tcgetwinsize`. Requires at least one of the pairs (:const:`termios."
+"TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); (:const:`termios.TIOCGSIZE`, :"
+"const:`termios.TIOCSSIZE`) to be defined."
+msgstr ""
+"Establezca el tamaño de la ventana tty para el descriptor de archivo *fd* de "
+"*winsize*, que es un tupla de dos elementos ``(ws_row, ws_col)`` como la "
+"devuelta por :func:`tcgetwinsize`. Requiere que al menos uno de los pares (:"
+"const:`termios.TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); (:const:`termios."
+"TIOCGSIZE`, :const:`termios.TIOCSSIZE`) por definir."
+
+#: ../Doc/library/termios.rst:99
+msgid "Module :mod:`tty`"
+msgstr "Módulo :mod:`tty`"
+
+#: ../Doc/library/termios.rst:100
+msgid "Convenience functions for common terminal control operations."
+msgstr ""
+"Funciones de conveniencia para operaciones comunes de control de terminal."
+
+#: ../Doc/library/termios.rst:106
+msgid "Example"
+msgstr "Ejemplo"
+
+#: ../Doc/library/termios.rst:108
+msgid ""
+"Here's a function that prompts for a password with echoing turned off.  Note "
+"the technique using a separate :func:`tcgetattr` call and a :keyword:"
+"`try` ... :keyword:`finally` statement to ensure that the old tty attributes "
+"are restored exactly no matter what happens::"
+msgstr ""
+"Aquí hay una función que solicita una contraseña con el eco desactivado. "
+"Tenga en cuenta la técnica utilizando una llamada separada  :func:"
+"`tcgetattr` y una sentencia :keyword:`try` ... :keyword:`finally`  para "
+"asegurarse de que los antiguos atributos tty se restauran exactamente sin "
+"importar lo que suceda::"

@@ -1,0 +1,180 @@
+# Copyright (C) 2001-2020, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 19:47+0200\n"
+"PO-Revision-Date: 2023-03-20 13:03-0300\n"
+"Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
+"Language-Team: python-doc-es\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../Doc/library/fnmatch.rst:2
+msgid ":mod:`fnmatch` --- Unix filename pattern matching"
+msgstr ":mod:`fnmatch` --- Coincidencia de patrones de nombre de archivos Unix"
+
+#: ../Doc/library/fnmatch.rst:7
+msgid "**Source code:** :source:`Lib/fnmatch.py`"
+msgstr "**Código fuente:** :source:`Lib/fnmatch.py`"
+
+#: ../Doc/library/fnmatch.rst:15
+msgid ""
+"This module provides support for Unix shell-style wildcards, which are *not* "
+"the same as regular expressions (which are documented in the :mod:`re` "
+"module).  The special characters used in shell-style wildcards are:"
+msgstr ""
+"Este módulo proporciona soporte para comodines de estilo shell de Unix, que "
+"*no* son lo mismo que las expresiones regulares (que se documentan en el "
+"módulo :mod:`re`). Los caracteres especiales utilizados en los comodines de "
+"estilo shell son:"
+
+#: ../Doc/library/fnmatch.rst:27
+msgid "Pattern"
+msgstr "Patrón"
+
+#: ../Doc/library/fnmatch.rst:27
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../Doc/library/fnmatch.rst:29
+msgid "``*``"
+msgstr "``*``"
+
+#: ../Doc/library/fnmatch.rst:29
+msgid "matches everything"
+msgstr "coincide con todo"
+
+#: ../Doc/library/fnmatch.rst:31
+msgid "``?``"
+msgstr "``?``"
+
+#: ../Doc/library/fnmatch.rst:31
+msgid "matches any single character"
+msgstr "coincide con un solo carácter"
+
+#: ../Doc/library/fnmatch.rst:33
+msgid "``[seq]``"
+msgstr "``[seq]``"
+
+#: ../Doc/library/fnmatch.rst:33
+msgid "matches any character in *seq*"
+msgstr "coincide con cualquier carácter presente en *seq*"
+
+#: ../Doc/library/fnmatch.rst:35
+msgid "``[!seq]``"
+msgstr "``[!seq]``"
+
+#: ../Doc/library/fnmatch.rst:35
+msgid "matches any character not in *seq*"
+msgstr "coincide con cualquier carácter ausente en *seq*"
+
+#: ../Doc/library/fnmatch.rst:38
+msgid ""
+"For a literal match, wrap the meta-characters in brackets. For example, "
+"``'[?]'`` matches the character ``'?'``."
+msgstr ""
+"Para una coincidencia literal, envuelva los meta-caracteres entre "
+"paréntesis. Por ejemplo, ``'[?]'`` coincide con el carácter ``'?'``."
+
+#: ../Doc/library/fnmatch.rst:43
+msgid ""
+"Note that the filename separator (``'/'`` on Unix) is *not* special to this "
+"module.  See module :mod:`glob` for pathname expansion (:mod:`glob` uses :"
+"func:`.filter` to match pathname segments).  Similarly, filenames starting "
+"with a period are not special for this module, and are matched by the ``*`` "
+"and ``?`` patterns."
+msgstr ""
+"Ten en cuenta que el separador de nombre de archivo (``'/'`` en Unix) *no* "
+"es tratado de forma especial en este módulo. Consulta el módulo :mod:`glob` "
+"para realizar expansiones de nombre de ruta (:mod:`glob` usa :func:`.filter` "
+"para hacer coincidir con los componentes del nombre de ruta). Del mismo "
+"modo, los nombres de archivo que comienzan con un punto tampoco son tratados "
+"de forma especial por este módulo y se corresponden con los patrones ``*`` y "
+"``?``."
+
+#: ../Doc/library/fnmatch.rst:49
+msgid ""
+"Also note that :func:`functools.lru_cache` with the *maxsize* of 32768 is "
+"used to cache the compiled regex patterns in the following functions: :func:"
+"`fnmatch`, :func:`fnmatchcase`, :func:`filter`."
+msgstr ""
+"También tenga en cuenta que :func:`functools.lru_cache` con el *maxsize* de "
+"32768 se usa para almacenar en caché los patrones compilados de expresiones "
+"regulares en las siguientes funciones: :func:`fnmatch`, :func:"
+"`fnmatchcase`, :func:`filter`."
+
+#: ../Doc/library/fnmatch.rst:55
+msgid ""
+"Test whether the *filename* string matches the *pattern* string, returning :"
+"const:`True` or :const:`False`.  Both parameters are case-normalized using :"
+"func:`os.path.normcase`. :func:`fnmatchcase` can be used to perform a case-"
+"sensitive comparison, regardless of whether that's standard for the "
+"operating system."
+msgstr ""
+"Prueba si la cadena de caracteres *filename* coincide con la cadena "
+"*pattern*, retornando :const:`True` o :const:`False`. Ambos parámetros se "
+"normalizan entre mayúsculas y minúsculas usando :func:`os.path.normcase`. :"
+"func:`fnmatchcase` se puede utilizar para realizar una comparación que "
+"distingue entre mayúsculas y minúsculas, independientemente de si es "
+"estándar para el sistema operativo."
+
+#: ../Doc/library/fnmatch.rst:61
+msgid ""
+"This example will print all file names in the current directory with the "
+"extension ``.txt``::"
+msgstr ""
+"Este ejemplo imprimirá todos los nombres de archivo en el directorio actual "
+"con la extensión ``.txt``::"
+
+#: ../Doc/library/fnmatch.rst:74
+msgid ""
+"Test whether *filename* matches *pattern*, returning :const:`True` or :const:"
+"`False`; the comparison is case-sensitive and does not apply :func:`os.path."
+"normcase`."
+msgstr ""
+"Prueba si *filename* coincide con *pattern*, retornando :const:`True` o :"
+"const:`False`; la comparación distingue entre mayúsculas y minúsculas y no "
+"aplica :func:`os.path.normcase`."
+
+#: ../Doc/library/fnmatch.rst:81
+msgid ""
+"Construct a list from those elements of the iterable *names* that match "
+"*pattern*. It is the same as ``[n for n in names if fnmatch(n, pattern)]``, "
+"but implemented more efficiently."
+msgstr ""
+"Construye una lista a partir de los elementos de los *names* iterables que "
+"coinciden con el *pattern*. Es lo mismo que ``[n for n in names if "
+"fnmatch(n, pattern)]``, pero implementado de manera más eficiente."
+
+#: ../Doc/library/fnmatch.rst:87
+msgid ""
+"Return the shell-style *pattern* converted to a regular expression for using "
+"with :func:`re.match`."
+msgstr ""
+"Retorna el *pattern* estilo shell convertido a una expresión regular para "
+"usar con :func:`re.match`."
+
+#: ../Doc/library/fnmatch.rst:90
+msgid "Example:"
+msgstr "Ejemplo:"
+
+#: ../Doc/library/fnmatch.rst:104
+msgid "Module :mod:`glob`"
+msgstr "Módulo :mod:`glob`"
+
+#: ../Doc/library/fnmatch.rst:105
+msgid "Unix shell-style path expansion."
+msgstr "Expansión de ruta estilo shell en Unix."

@@ -1,0 +1,1301 @@
+# Copyright (C) 2001-2020, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to
+# get the list of volunteers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-16 21:42+0200\n"
+"PO-Revision-Date: 2021-12-08 23:56+0100\n"
+"Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
+"Language-Team: python-doc-es\n"
+"Language: es_CO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../Doc/library/ipaddress.rst:2
+msgid ":mod:`ipaddress` --- IPv4/IPv6 manipulation library"
+msgstr ":mod:`ipaddress` --- Biblioteca de manipulación IPv4 / IPv6"
+
+#: ../Doc/library/ipaddress.rst:9
+msgid "**Source code:** :source:`Lib/ipaddress.py`"
+msgstr "**Source code:** :source:`Lib/ipaddress.py`"
+
+#: ../Doc/library/ipaddress.rst:13
+msgid ""
+":mod:`ipaddress` provides the capabilities to create, manipulate and operate "
+"on IPv4 and IPv6 addresses and networks."
+msgstr ""
+":mod:`ipaddress` proporciona las capacidades para crear, manipular y operar "
+"en redes y direcciones IPv4 e IPv6."
+
+#: ../Doc/library/ipaddress.rst:16
+msgid ""
+"The functions and classes in this module make it straightforward to handle "
+"various tasks related to IP addresses, including checking whether or not two "
+"hosts are on the same subnet, iterating over all hosts in a particular "
+"subnet, checking whether or not a string represents a valid IP address or "
+"network definition, and so on."
+msgstr ""
+"Las funciones y clases de este módulo facilitan el manejo de varias tareas "
+"relacionadas con las direcciones IP, incluida la verificación de si dos "
+"hosts están en la misma subred, la iteración sobre todos los hosts de una "
+"subred en particular, la verificación de si una cadena representa un valor "
+"válido o no. Dirección IP o definición de red, etc."
+
+#: ../Doc/library/ipaddress.rst:22
+msgid ""
+"This is the full module API reference—for an overview and introduction, see :"
+"ref:`ipaddress-howto`."
+msgstr ""
+"Esta es la referencia completa de la API del módulo; para obtener una "
+"descripción general y una introducción, consulte :ref:`ipaddress-howto`."
+
+#: ../Doc/library/ipaddress.rst:35
+msgid "Convenience factory functions"
+msgstr "Funciones de fábrica de conveniencia"
+
+#: ../Doc/library/ipaddress.rst:37
+msgid ""
+"The :mod:`ipaddress` module provides factory functions to conveniently "
+"create IP addresses, networks and interfaces:"
+msgstr ""
+"El módulo :mod:`ipaddress` proporciona funciones de fábrica para crear "
+"cómodamente direcciones IP, redes e interfaces:"
+
+#: ../Doc/library/ipaddress.rst:42
+msgid ""
+"Return an :class:`IPv4Address` or :class:`IPv6Address` object depending on "
+"the IP address passed as argument.  Either IPv4 or IPv6 addresses may be "
+"supplied; integers less than ``2**32`` will be considered to be IPv4 by "
+"default. A :exc:`ValueError` is raised if *address* does not represent a "
+"valid IPv4 or IPv6 address."
+msgstr ""
+"Retorna un objeto :class:`IPv4Address` o :class:`IPv6Address` según la "
+"dirección IP pasada como argumento. Se pueden proporcionar direcciones IPv4 "
+"o IPv6; los enteros menores que ``2**32`` se considerarán IPv4 de forma "
+"predeterminada. Se lanza un :exc:`ValueError` si *address* no representa una "
+"dirección IPv4 o IPv6 válida."
+
+#: ../Doc/library/ipaddress.rst:56
+msgid ""
+"Return an :class:`IPv4Network` or :class:`IPv6Network` object depending on "
+"the IP address passed as argument.  *address* is a string or integer "
+"representing the IP network.  Either IPv4 or IPv6 networks may be supplied; "
+"integers less than ``2**32`` will be considered to be IPv4 by default.  "
+"*strict* is passed to :class:`IPv4Network` or :class:`IPv6Network` "
+"constructor.  A :exc:`ValueError` is raised if *address* does not represent "
+"a valid IPv4 or IPv6 address, or if the network has host bits set."
+msgstr ""
+"Retorna un objeto :class:`IPv4Network` o :class:`IPv6Network` dependiendo de "
+"la dirección IP pasada como argumento.  *address* es una cadena o entero que "
+"representa la red IP.  Se pueden suministrar redes IPv4 o IPv6; los enteros "
+"menores que ``2**32`` se considerarán IPv4 de forma predeterminada. *strict* "
+"se pasa a :class:`IPv4Network` o :class:`IPv6Network` constructor.  Se "
+"genera un :exc:`ValueError` si *address* no representa una dirección IPv4 o "
+"IPv6 válida, o si la red tiene bits de host establecidos."
+
+#: ../Doc/library/ipaddress.rst:70
+msgid ""
+"Return an :class:`IPv4Interface` or :class:`IPv6Interface` object depending "
+"on the IP address passed as argument.  *address* is a string or integer "
+"representing the IP address.  Either IPv4 or IPv6 addresses may be supplied; "
+"integers less than ``2**32`` will be considered to be IPv4 by default.  A :"
+"exc:`ValueError` is raised if *address* does not represent a valid IPv4 or "
+"IPv6 address."
+msgstr ""
+"Retorna un objeto :class:`IPv4Interface` o :class:`IPv6Interface` "
+"dependiendo de la dirección IP pasada como argumento.  *address* es una "
+"cadena o entero que representa la dirección IP.  Se pueden proporcionar "
+"direcciones IPv4 o IPv6; los enteros menores que ``2**32`` se considerarán "
+"IPv4 de forma predeterminada.  Se genera un :exc:`ValueError` si *address* "
+"no representa una dirección IPv4 o IPv6 válida."
+
+#: ../Doc/library/ipaddress.rst:77
+msgid ""
+"One downside of these convenience functions is that the need to handle both "
+"IPv4 and IPv6 formats means that error messages provide minimal information "
+"on the precise error, as the functions don't know whether the IPv4 or IPv6 "
+"format was intended. More detailed error reporting can be obtained by "
+"calling the appropriate version specific class constructors directly."
+msgstr ""
+"Una desventaja de estas funciones de conveniencia es que la necesidad de "
+"manejar los formatos IPv4 e IPv6 significa que los mensajes de error brindan "
+"información mínima sobre el error exacto, ya que las funciones no saben si "
+"se pretendía usar el formato IPv4 o IPv6. Se pueden obtener informes de "
+"errores más detallados llamando directamente a los constructores de clases "
+"específicos de la versión adecuada."
+
+#: ../Doc/library/ipaddress.rst:86
+msgid "IP Addresses"
+msgstr "Direcciones IP"
+
+#: ../Doc/library/ipaddress.rst:89
+msgid "Address objects"
+msgstr "Objetos de dirección"
+
+#: ../Doc/library/ipaddress.rst:91
+msgid ""
+"The :class:`IPv4Address` and :class:`IPv6Address` objects share a lot of "
+"common attributes.  Some attributes that are only meaningful for IPv6 "
+"addresses are also implemented by :class:`IPv4Address` objects, in order to "
+"make it easier to write code that handles both IP versions correctly.  "
+"Address objects are :term:`hashable`, so they can be used as keys in "
+"dictionaries."
+msgstr ""
+"Los objetos :class:`IPv4Address` y :class:`IPv6Address` comparten muchos "
+"atributos comunes. Algunos atributos que solo son significativos para "
+"direcciones IPv6 también son implementados por objetos :class:`IPv4Address`, "
+"a fin de facilitar la escritura de código que maneje ambas versiones de IP "
+"correctamente. Los objetos de dirección son :term:`hashable`, por lo que se "
+"pueden usar como claves en diccionarios."
+
+#: ../Doc/library/ipaddress.rst:99
+msgid ""
+"Construct an IPv4 address.  An :exc:`AddressValueError` is raised if "
+"*address* is not a valid IPv4 address."
+msgstr ""
+"Construya una dirección IPv4. Se genera un :exc:`AddressValueError` si "
+"*address* no es una dirección IPv4 válida."
+
+#: ../Doc/library/ipaddress.rst:102
+msgid "The following constitutes a valid IPv4 address:"
+msgstr "Lo siguiente constituye una dirección IPv4 válida:"
+
+#: ../Doc/library/ipaddress.rst:104
+msgid ""
+"A string in decimal-dot notation, consisting of four decimal integers in the "
+"inclusive range 0--255, separated by dots (e.g. ``192.168.0.1``). Each "
+"integer represents an octet (byte) in the address. Leading zeroes are not "
+"tolerated to prevent confusion with octal notation."
+msgstr ""
+"Una cadena en notación de punto decimal, que consta de cuatro enteros "
+"decimales en el rango inclusivo 0-255, separados por puntos (por ejemplo, "
+"``192.168.0.1``). Cada entero representa un octeto (byte) en la dirección. "
+"No se toleran ceros iniciales para evitar confusiones con la notación octal."
+
+#: ../Doc/library/ipaddress.rst:108
+msgid "An integer that fits into 32 bits."
+msgstr "Un número entero que cabe en 32 bits."
+
+#: ../Doc/library/ipaddress.rst:109
+msgid ""
+"An integer packed into a :class:`bytes` object of length 4 (most significant "
+"octet first)."
+msgstr ""
+"Un entero empaquetado en un objeto :class:`bytes` de longitud 4 (primero el "
+"octeto más significativo)."
+
+#: ../Doc/library/ipaddress.rst:121
+msgid ""
+"Leading zeros are tolerated, even in ambiguous cases that look like octal "
+"notation."
+msgstr ""
+"Se toleran los ceros iniciales, incluso en casos ambiguos que parecen "
+"notación octal."
+
+#: ../Doc/library/ipaddress.rst:126
+msgid ""
+"Leading zeros are no longer tolerated and are treated as an error. IPv4 "
+"address strings are now parsed as strict as glibc :func:`~socket.inet_pton`."
+msgstr ""
+"Los ceros iniciales ya no se toleran y se tratan como un error. Las cadenas "
+"de direcciones IPv4 ahora se analizan tan estrictamente como glibc :func:"
+"`~socket.inet_pton`."
+
+#: ../Doc/library/ipaddress.rst:132
+msgid ""
+"The above change was also included in Python 3.9 starting with version 3.9.5."
+msgstr ""
+"El cambio anterior también se incluyó en Python 3.9 a partir de la versión "
+"3.9.5."
+
+#: ../Doc/library/ipaddress.rst:137
+msgid ""
+"The above change was also included in Python 3.8 starting with version "
+"3.8.12."
+msgstr ""
+"El cambio anterior también se incluyó en Python 3.8 a partir de la versión "
+"3.8.12."
+
+#: ../Doc/library/ipaddress.rst:142
+msgid "The appropriate version number: ``4`` for IPv4, ``6`` for IPv6."
+msgstr "El número de versión apropiado: ``4`` para IPv4, ``6`` para IPv6."
+
+#: ../Doc/library/ipaddress.rst:146
+msgid ""
+"The total number of bits in the address representation for this version: "
+"``32`` for IPv4, ``128`` for IPv6."
+msgstr ""
+"El número total de bits en la representación de direcciones para esta "
+"versión: ``32`` para IPv4, ``128`` para IPv6."
+
+#: ../Doc/library/ipaddress.rst:149
+msgid ""
+"The prefix defines the number of leading bits in an  address that are "
+"compared to determine whether or not an address is part of a network."
+msgstr ""
+"El prefijo define el número de bits iniciales en una dirección que se "
+"comparan para determinar si una dirección es parte de una red o no."
+
+#: ../Doc/library/ipaddress.rst:156
+msgid ""
+"The string representation in dotted decimal notation. Leading zeroes are "
+"never included in the representation."
+msgstr ""
+"Representación de cadena en notación decimal con puntos. Los ceros iniciales "
+"nunca se incluyen en la representación."
+
+#: ../Doc/library/ipaddress.rst:159
+msgid ""
+"As IPv4 does not define a shorthand notation for addresses with octets set "
+"to zero, these two attributes are always the same as ``str(addr)`` for IPv4 "
+"addresses. Exposing these attributes makes it easier to write display code "
+"that can handle both IPv4 and IPv6 addresses."
+msgstr ""
+"Como IPv4 no define una notación abreviada para direcciones con octetos "
+"establecidos en cero, estos dos atributos son siempre los mismos que "
+"``str(addr)`` para direcciones IPv4. La exposición de estos atributos "
+"facilita la escritura de código de visualización que pueda manejar "
+"direcciones IPv4 e IPv6."
+
+#: ../Doc/library/ipaddress.rst:166
+msgid ""
+"The binary representation of this address - a :class:`bytes` object of the "
+"appropriate length (most significant octet first). This is 4 bytes for IPv4 "
+"and 16 bytes for IPv6."
+msgstr ""
+"La representación binaria de esta dirección: un objeto :class:`bytes` de la "
+"longitud adecuada (primero el octeto más significativo). Son 4 bytes para "
+"IPv4 y 16 bytes para IPv6."
+
+#: ../Doc/library/ipaddress.rst:172
+msgid "The name of the reverse DNS PTR record for the IP address, e.g.::"
+msgstr ""
+"El nombre del registro PTR de DNS inverso para la dirección IP, por ejemplo::"
+
+#: ../Doc/library/ipaddress.rst:179
+msgid ""
+"This is the name that could be used for performing a PTR lookup, not the "
+"resolved hostname itself."
+msgstr ""
+"Este es el nombre que podría usarse para realizar una búsqueda PTR, no el "
+"nombre de host resuelto en sí."
+
+#: ../Doc/library/ipaddress.rst:186
+msgid ""
+"``True`` if the address is reserved for multicast use.  See :RFC:`3171` (for "
+"IPv4) or :RFC:`2373` (for IPv6)."
+msgstr ""
+"``True`` si la dirección está reservada para uso de multidifusión. Consulte :"
+"RFC:`3171` (para IPv4) o :RFC:`2373` (para IPv6)."
+
+#: ../Doc/library/ipaddress.rst:191
+msgid ""
+"``True`` if the address is allocated for private networks.  See iana-ipv4-"
+"special-registry_ (for IPv4) or iana-ipv6-special-registry_ (for IPv6)."
+msgstr ""
+"``True`` si la dirección está asignada para redes privadas. Consulte iana-"
+"ipv4-special-registry_ (para IPv4) o iana-ipv6-special-registry_ (para IPv6)."
+
+#: ../Doc/library/ipaddress.rst:197
+msgid ""
+"``True`` if the address is allocated for public networks.  See iana-ipv4-"
+"special-registry_ (for IPv4) or iana-ipv6-special-registry_ (for IPv6)."
+msgstr ""
+"``True`` si la dirección está asignada para redes públicas. Consulte iana-"
+"ipv4-special-registry_ (para IPv4) o iana-ipv6-special-registry_ (para IPv6)."
+
+#: ../Doc/library/ipaddress.rst:205
+msgid ""
+"``True`` if the address is unspecified.  See :RFC:`5735` (for IPv4) or :RFC:"
+"`2373` (for IPv6)."
+msgstr ""
+"``True`` si la dirección no está especificada. Consulte :RFC:`5735` (para "
+"IPv4) o :RFC:`2373` (para IPv6)."
+
+#: ../Doc/library/ipaddress.rst:210
+msgid "``True`` if the address is otherwise IETF reserved."
+msgstr "``True`` si la dirección está reservada IETF."
+
+#: ../Doc/library/ipaddress.rst:214
+msgid ""
+"``True`` if this is a loopback address.  See :RFC:`3330` (for IPv4) or :RFC:"
+"`2373` (for IPv6)."
+msgstr ""
+"``True`` si se trata de una dirección de bucle invertido. Consulte :RFC:"
+"`3330` (para IPv4) o :RFC:`2373` (para IPv6)."
+
+#: ../Doc/library/ipaddress.rst:219
+msgid ""
+"``True`` if the address is reserved for link-local usage.  See :RFC:`3927`."
+msgstr ""
+"``True`` si se trata de una dirección de bucle invertido. Consulte :RFC:"
+"`3330` (para IPv4) o :RFC:`2373` (para IPv6). ``True`` si la dirección está "
+"reservada para uso local de enlace. Ver :RFC:`3927`."
+
+#: ../Doc/library/ipaddress.rst:227
+msgid ""
+"Returns a string representation of the IP address, controlled by an explicit "
+"format string. *fmt* can be one of the following: ``'s'``, the default "
+"option, equivalent to :func:`str`, ``'b'`` for a zero-padded binary string, "
+"``'X'`` or ``'x'`` for an uppercase or lowercase hexadecimal representation, "
+"or ``'n'``, which is equivalent to ``'b'`` for IPv4 addresses and ``'x'`` "
+"for IPv6. For binary and hexadecimal representations, the form specifier "
+"``'#'`` and the grouping option ``'_'`` are available. ``__format__`` is "
+"used by ``format``, ``str.format`` and f-strings."
+msgstr ""
+"Devuelve una representación de cadena de la dirección IP, controlada por una "
+"cadena de formato explícito. *fmt* puede ser uno de los siguientes: ``'s'``, "
+"la opción predeterminada, equivalente a :func:`str`, ``'b'`` para una cadena "
+"binaria con relleno de ceros, ``'X'`` o ``'x'`` para una representación "
+"hexadecimal en mayúsculas o minúsculas, o ``'n'``, que es equivalente a "
+"``'b'`` para direcciones IPv4 y ``'x'`` para IPv6. Para representaciones "
+"binarias y hexadecimales, el especificador de formulario ``'#'`` y la opción "
+"de agrupación ``'_'`` están disponibles. ``__format__`` es utilizado por "
+"``format``, ``str.format`` y f-strings."
+
+#: ../Doc/library/ipaddress.rst:254
+msgid ""
+"Construct an IPv6 address.  An :exc:`AddressValueError` is raised if "
+"*address* is not a valid IPv6 address."
+msgstr ""
+"Construya una dirección IPv6. Se genera un :exc:`AddressValueError` si "
+"*address* no es una dirección IPv6 válida."
+
+#: ../Doc/library/ipaddress.rst:257
+msgid "The following constitutes a valid IPv6 address:"
+msgstr "Lo siguiente constituye una dirección IPv6 válida:"
+
+#: ../Doc/library/ipaddress.rst:259
+msgid ""
+"A string consisting of eight groups of four hexadecimal digits, each group "
+"representing 16 bits.  The groups are separated by colons. This describes an "
+"*exploded* (longhand) notation.  The string can also be *compressed* "
+"(shorthand notation) by various means.  See :RFC:`4291` for details.  For "
+"example, ``\"0000:0000:0000:0000:0000:0abc:0007:0def\"`` can be compressed "
+"to ``\"::abc:7:def\"``."
+msgstr ""
+"Una cadena que consta de ocho grupos de cuatro dígitos hexadecimales, cada "
+"grupo representa 16 bits. Los grupos están separados por dos puntos. Esto "
+"describe una notación *explotada* (a mano). La cadena también se puede "
+"*comprimir* (notación abreviada) por varios medios. Consulte :RFC:`4291` "
+"para obtener más detalles. Por ejemplo, "
+"``\"0000:0000:0000:0000:0000:0abc:0007:0def\"`` se puede comprimir en ``\"::"
+"abc:7:def\"``."
+
+#: ../Doc/library/ipaddress.rst:267
+#, python-format
+msgid ""
+"Optionally, the string may also have a scope zone ID, expressed with a "
+"suffix ``%scope_id``. If present, the scope ID must be non-empty, and may "
+"not contain ``%``. See :RFC:`4007` for details. For example, "
+"``fe80::1234%1`` might identify address ``fe80::1234`` on the first link of "
+"the node."
+msgstr ""
+"Opcionalmente, la cadena también puede tener un ID de zona de alcance, "
+"expresado con un sufijo ``%scope_id``. Si está presente, el ID de alcance no "
+"debe estar vacío y no puede contener ``%``. Consulte :RFC:`4007` para "
+"obtener más detalles. Por ejemplo, ``fe80::1234%1`` podría identificar la "
+"dirección ``fe80::1234`` en el primer enlace del nodo."
+
+#: ../Doc/library/ipaddress.rst:272
+msgid "An integer that fits into 128 bits."
+msgstr "Un número entero que cabe en 128 bits."
+
+#: ../Doc/library/ipaddress.rst:273
+msgid ""
+"An integer packed into a :class:`bytes` object of length 16, big-endian."
+msgstr ""
+"Un entero empaquetado en un objeto :class:`bytes` de longitud 16, big-endian."
+
+#: ../Doc/library/ipaddress.rst:283
+msgid ""
+"The short form of the address representation, with leading zeroes in groups "
+"omitted and the longest sequence of groups consisting entirely of zeroes "
+"collapsed to a single empty group."
+msgstr ""
+"La forma corta de la representación de la dirección, con ceros a la "
+"izquierda en los grupos omitidos y la secuencia más larga de grupos que "
+"consta completamente de ceros colapsó en un solo grupo vacío."
+
+#: ../Doc/library/ipaddress.rst:287
+msgid "This is also the value returned by ``str(addr)`` for IPv6 addresses."
+msgstr ""
+"Este también es el valor devuelto por ``str(addr)`` para las direcciones "
+"IPv6."
+
+#: ../Doc/library/ipaddress.rst:291
+msgid ""
+"The long form of the address representation, with all leading zeroes and "
+"groups consisting entirely of zeroes included."
+msgstr ""
+"La forma larga de la representación de la dirección, con todos los ceros a "
+"la izquierda y los grupos que constan completamente de ceros incluidos."
+
+#: ../Doc/library/ipaddress.rst:295
+msgid ""
+"For the following attributes and methods, see the corresponding "
+"documentation of the :class:`IPv4Address` class:"
+msgstr ""
+"Para los siguientes atributos y métodos, consulte la documentación "
+"correspondiente de la clase :class:`IPv4Address`:"
+
+#: ../Doc/library/ipaddress.rst:310
+msgid "is_global"
+msgstr "is_global"
+
+#: ../Doc/library/ipaddress.rst:315
+msgid ""
+"``True`` if the address is reserved for site-local usage.  Note that the "
+"site-local address space has been deprecated by :RFC:`3879`. Use :attr:"
+"`~IPv4Address.is_private` to test if this address is in the space of unique "
+"local addresses as defined by :RFC:`4193`."
+msgstr ""
+"``True`` si la dirección está reservada para uso local del sitio. Tenga en "
+"cuenta que el espacio de direcciones local del sitio ha quedado obsoleto "
+"por :RFC:`3879`. Utilice :attr:`~IPv4Address.is_private` para probar si esta "
+"dirección está en el espacio de direcciones locales únicas como se define "
+"en :RFC:`4193`."
+
+#: ../Doc/library/ipaddress.rst:322
+msgid ""
+"For addresses that appear to be IPv4 mapped addresses (starting with ``::"
+"FFFF/96``), this property will report the embedded IPv4 address. For any "
+"other address, this property will be ``None``."
+msgstr ""
+"Para las direcciones que parecen ser direcciones IPv4 asignadas (que "
+"comienzan con ``::FFFF/96``), esta propiedad informará la dirección IPv4 "
+"incrustada. Para cualquier otra dirección, esta propiedad será ``None``."
+
+#: ../Doc/library/ipaddress.rst:328
+msgid ""
+"For scoped addresses as defined by :RFC:`4007`, this property identifies the "
+"particular zone of the address's scope that the address belongs to, as a "
+"string. When no scope zone is specified, this property will be ``None``."
+msgstr ""
+"Para las direcciones de ámbito definido por :RFC:`4007`, esta propiedad "
+"identifica la zona particular del ámbito de la dirección a la que pertenece "
+"la dirección, como una cadena. Cuando no se especifica ninguna zona de "
+"alcance, esta propiedad será ``None``."
+
+#: ../Doc/library/ipaddress.rst:334
+msgid ""
+"For addresses that appear to be 6to4 addresses  (starting with "
+"``2002::/16``) as defined by :RFC:`3056`, this property will report the "
+"embedded IPv4 address.  For any other address, this property will be "
+"``None``."
+msgstr ""
+"Para direcciones que parecen ser direcciones 6to4 (comenzando con "
+"``2002::/16``) según lo definido por :RFC:`3056`, esta propiedad informará "
+"la dirección IPv4 incrustada. Para cualquier otra dirección, esta propiedad "
+"será ``None``."
+
+#: ../Doc/library/ipaddress.rst:341
+msgid ""
+"For addresses that appear to be Teredo addresses (starting with "
+"``2001::/32``) as defined by :RFC:`4380`, this property will report the "
+"embedded ``(server, client)`` IP address pair.  For any other address, this "
+"property will be ``None``."
+msgstr ""
+"Para las direcciones que parecen ser direcciones Teredo (que comienzan con "
+"``2001::/32``) según lo definido por :RFC:`4380`, esta propiedad informará "
+"el par de direcciones IP ``(servidor, cliente)`` incrustado. Para cualquier "
+"otra dirección, esta propiedad será ``None``."
+
+#: ../Doc/library/ipaddress.rst:348
+msgid ""
+"Refer to the corresponding method documentation in :class:`IPv4Address`."
+msgstr ""
+"Consulte la documentación del método correspondiente en :class:`IPv4Address`."
+
+#: ../Doc/library/ipaddress.rst:354
+msgid "Conversion to Strings and Integers"
+msgstr "Conversión a cadenas y enteros"
+
+#: ../Doc/library/ipaddress.rst:356
+msgid ""
+"To interoperate with networking interfaces such as the socket module, "
+"addresses must be converted to strings or integers. This is handled using "
+"the :func:`str` and :func:`int` builtin functions::"
+msgstr ""
+"Para interoperar con interfaces de red como el módulo de socket, las "
+"direcciones deben convertirse en cadenas o números enteros. Esto se maneja "
+"usando las funciones integradas :func:`str` y :func:`int` ::"
+
+#: ../Doc/library/ipaddress.rst:369
+msgid ""
+"Note that IPv6 scoped addresses are converted to integers without scope zone "
+"ID."
+msgstr ""
+"Tenga en cuenta que las direcciones de ámbito IPv6 se convierten en números "
+"enteros sin ID de zona de ámbito."
+
+#: ../Doc/library/ipaddress.rst:373 ../Doc/library/ipaddress.rst:757
+#: ../Doc/library/ipaddress.rst:893
+msgid "Operators"
+msgstr "Operadores"
+
+#: ../Doc/library/ipaddress.rst:375
+msgid ""
+"Address objects support some operators.  Unless stated otherwise, operators "
+"can only be applied between compatible objects (i.e. IPv4 with IPv4, IPv6 "
+"with IPv6)."
+msgstr ""
+"Los objetos de dirección admiten algunos operadores. A menos que se indique "
+"lo contrario, los operadores solo se pueden aplicar entre objetos "
+"compatibles (es decir, IPv4 con IPv4, IPv6 con IPv6)."
+
+#: ../Doc/library/ipaddress.rst:381
+msgid "Comparison operators"
+msgstr "Operadores de comparación"
+
+#: ../Doc/library/ipaddress.rst:383
+msgid ""
+"Address objects can be compared with the usual set of comparison operators. "
+"Same IPv6 addresses with different scope zone IDs are not equal. Some "
+"examples::"
+msgstr ""
+"Los objetos de dirección se pueden comparar con el conjunto habitual de "
+"operadores de comparación. Las mismas direcciones IPv6 con diferentes ID de "
+"zona de alcance no son iguales. Algunos ejemplos::"
+
+#: ../Doc/library/ipaddress.rst:400
+msgid "Arithmetic operators"
+msgstr "Operadores aritméticos"
+
+#: ../Doc/library/ipaddress.rst:402
+msgid ""
+"Integers can be added to or subtracted from address objects.  Some examples::"
+msgstr ""
+"Los números enteros se pueden sumar o restar de los objetos de dirección. "
+"Algunos ejemplos::"
+
+#: ../Doc/library/ipaddress.rst:415
+msgid "IP Network definitions"
+msgstr "Definiciones de red IP"
+
+#: ../Doc/library/ipaddress.rst:417
+msgid ""
+"The :class:`IPv4Network` and :class:`IPv6Network` objects provide a "
+"mechanism for defining and inspecting IP network definitions.  A network "
+"definition consists of a *mask* and a *network address*, and as such defines "
+"a range of IP addresses that equal the network address when masked (binary "
+"AND) with the mask.  For example, a network definition with the mask "
+"``255.255.255.0`` and the network address ``192.168.1.0`` consists of IP "
+"addresses in the inclusive range ``192.168.1.0`` to ``192.168.1.255``."
+msgstr ""
+"Los objetos :class:`IPv4Network` y :class:`IPv6Network` proporcionan un "
+"mecanismo para definir e inspeccionar las definiciones de red IP. Una "
+"definición de red consta de una * máscara * y una * dirección de red * y, "
+"como tal, define un rango de direcciones IP que son iguales a la dirección "
+"de red cuando están enmascaradas (Y binario) con la máscara. Por ejemplo, "
+"una definición de red con la máscara ``255.255.255.0`` y la dirección de red "
+"``192.168.1.0`` consta de direcciones IP en el rango inclusivo de "
+"``192.168.1.0`` a ``192.168.1.255``."
+
+#: ../Doc/library/ipaddress.rst:427
+msgid "Prefix, net mask and host mask"
+msgstr "Prefijo, máscara de red y máscara de host"
+
+#: ../Doc/library/ipaddress.rst:429
+msgid ""
+"There are several equivalent ways to specify IP network masks.  A *prefix* "
+"``/<nbits>`` is a notation that denotes how many high-order bits are set in "
+"the network mask.  A *net mask* is an IP address with some number of high-"
+"order bits set.  Thus the prefix ``/24`` is equivalent to the net mask "
+"``255.255.255.0`` in IPv4, or ``ffff:ff00::`` in IPv6.  In addition, a *host "
+"mask* is the logical inverse of a *net mask*, and is sometimes used (for "
+"example in Cisco access control lists) to denote a network mask.  The host "
+"mask equivalent to ``/24`` in IPv4 is ``0.0.0.255``."
+msgstr ""
+"Hay varias formas equivalentes de especificar máscaras de red IP. Un "
+"*prefix* ``/<nbits>`` es una notación que indica cuántos bits de orden "
+"superior se establecen en la máscara de red. Una máscara de red (*mask*) es "
+"una dirección IP con una cierta cantidad de bits de orden superior "
+"establecidos. Por lo tanto, el prefijo ``/24`` es equivalente a la máscara "
+"de red ``255.255.255.0`` en IPv4, o ``ffff:ff00::`` en IPv6. Además, una * "
+"máscara de host * es el inverso lógico de una * máscara de red * y, a veces, "
+"se utiliza (por ejemplo, en las listas de control de acceso de Cisco) para "
+"indicar una máscara de red. La máscara de host equivalente a ``/24`` en IPv4 "
+"es ``0.0.0.255``."
+
+#: ../Doc/library/ipaddress.rst:440
+msgid "Network objects"
+msgstr "Objetos de red"
+
+#: ../Doc/library/ipaddress.rst:442
+msgid ""
+"All attributes implemented by address objects are implemented by network "
+"objects as well.  In addition, network objects implement additional "
+"attributes. All of these are common between :class:`IPv4Network` and :class:"
+"`IPv6Network`, so to avoid duplication they are only documented for :class:"
+"`IPv4Network`. Network objects are :term:`hashable`, so they can be used as "
+"keys in dictionaries."
+msgstr ""
+"Todos los atributos implementados por objetos de dirección también son "
+"implementados por objetos de red. Además, los objetos de red implementan "
+"atributos adicionales. Todos estos son comunes entre :class:`IPv4Network` y :"
+"class:`IPv6Network`, por lo que para evitar la duplicación solo se "
+"documentan para :class:`IPv4Network`. Los objetos de red son :term:"
+"`hashable`, por lo que se pueden usar como claves en diccionarios."
+
+#: ../Doc/library/ipaddress.rst:451
+msgid ""
+"Construct an IPv4 network definition.  *address* can be one of the following:"
+msgstr ""
+"Construya una definición de red IPv4. *address* puede ser una de las "
+"siguientes:"
+
+#: ../Doc/library/ipaddress.rst:453
+msgid ""
+"A string consisting of an IP address and an optional mask, separated by a "
+"slash (``/``).  The IP address is the network address, and the mask can be "
+"either a single number, which means it's a *prefix*, or a string "
+"representation of an IPv4 address.  If it's the latter, the mask is "
+"interpreted as a *net mask* if it starts with a non-zero field, or as a "
+"*host mask* if it starts with a zero field, with the single exception of an "
+"all-zero mask which is treated as a *net mask*.  If no mask is provided, "
+"it's considered to be ``/32``."
+msgstr ""
+"Una cadena que consta de una dirección IP y una máscara opcional, separadas "
+"por una barra (``/``). La dirección IP es la dirección de red y la máscara "
+"puede ser un solo número, lo que significa que es un *prefix*, o una "
+"representación de cadena de caracteres de una dirección IPv4.  Si es la "
+"última, la máscara es interpretada como una *net mask* si comienza con un "
+"campo no nulo, o como una *host mask* si comienza con un campo cero, con la "
+"excepción de una máscara de solo ceros la cual es tratada como una *net "
+"mask*. Si no se proporciona una máscara, se considera ``/32``."
+
+#: ../Doc/library/ipaddress.rst:462
+msgid ""
+"For example, the following *address* specifications are equivalent: "
+"``192.168.1.0/24``, ``192.168.1.0/255.255.255.0`` and "
+"``192.168.1.0/0.0.0.255``."
+msgstr ""
+"Por ejemplo, las siguientes especificaciones de *address* son equivalentes: "
+"``192.168.1.0/24``, ``192.168.1.0/255.255.255.0`` y "
+"``192.168.1.0/0.0.0.255``."
+
+#: ../Doc/library/ipaddress.rst:466
+msgid ""
+"An integer that fits into 32 bits.  This is equivalent to a single-address "
+"network, with the network address being *address* and the mask being ``/32``."
+msgstr ""
+"Un número entero que cabe en 32 bits. Esto es equivalente a una red de una "
+"sola dirección, con la dirección de red *address* y la máscara ``/32``."
+
+#: ../Doc/library/ipaddress.rst:470
+msgid ""
+"An integer packed into a :class:`bytes` object of length 4, big-endian. The "
+"interpretation is similar to an integer *address*."
+msgstr ""
+"Un entero empaquetado en un objeto :class:`bytes` de longitud 4, big-endian. "
+"La interpretación es similar a una *address* entera."
+
+#: ../Doc/library/ipaddress.rst:473
+msgid ""
+"A two-tuple of an address description and a netmask, where the address "
+"description is either a string, a 32-bits integer, a 4-bytes packed integer, "
+"or an existing IPv4Address object; and the netmask is either an integer "
+"representing the prefix length (e.g. ``24``) or a string representing the "
+"prefix mask (e.g. ``255.255.255.0``)."
+msgstr ""
+"Dos tuplas de una descripción de dirección y una máscara de red, donde la "
+"descripción de la dirección es una cadena, un entero de 32 bits, un entero "
+"empaquetado de 4 bytes o un objeto IPv4Address existente; y la máscara de "
+"red es un número entero que representa la longitud del prefijo (por ejemplo, "
+"``24``) o una cadena que representa la máscara de prefijo (por ejemplo, "
+"``255.255.255.0``)."
+
+#: ../Doc/library/ipaddress.rst:479
+msgid ""
+"An :exc:`AddressValueError` is raised if *address* is not a valid IPv4 "
+"address.  A :exc:`NetmaskValueError` is raised if the mask is not valid for "
+"an IPv4 address."
+msgstr ""
+"Se genera un :exc:`AddressValueError` si *address* no es una dirección IPv4 "
+"válida. A :exc:`NetmaskValueError` se genera si la máscara no es válida para "
+"una dirección IPv4."
+
+#: ../Doc/library/ipaddress.rst:483 ../Doc/library/ipaddress.rst:703
+msgid ""
+"If *strict* is ``True`` and host bits are set in the supplied address, then :"
+"exc:`ValueError` is raised.  Otherwise, the host bits are masked out to "
+"determine the appropriate network address."
+msgstr ""
+"Si *strict* es ``True`` y los bits de host están configurados en la "
+"dirección proporcionada, entonces :exc:`ValueError` se genera. De lo "
+"contrario, los bits del host se enmascaran para determinar la dirección de "
+"red adecuada."
+
+#: ../Doc/library/ipaddress.rst:487
+msgid ""
+"Unless stated otherwise, all network methods accepting other network/address "
+"objects will raise :exc:`TypeError` if the argument's IP version is "
+"incompatible to ``self``."
+msgstr ""
+"A menos que se indique lo contrario, todos los métodos de red que acepten "
+"otros objetos de red / dirección generarán :exc:`TypeError` si la versión de "
+"IP del argumento es incompatible con ``self``."
+
+#: ../Doc/library/ipaddress.rst:493 ../Doc/library/ipaddress.rst:709
+msgid "Added the two-tuple form for the *address* constructor parameter."
+msgstr ""
+"Se agregó la forma de dos tuplas para el parámetro de constructor *address*."
+
+#: ../Doc/library/ipaddress.rst:498
+msgid ""
+"Refer to the corresponding attribute documentation in :class:`IPv4Address`."
+msgstr ""
+"Consulte la documentación del atributo correspondiente en :class:"
+"`IPv4Address`."
+
+#: ../Doc/library/ipaddress.rst:508
+msgid ""
+"These attributes are true for the network as a whole if they are true for "
+"both the network address and the broadcast address."
+msgstr ""
+"Estos atributos son verdaderos para la red en su conjunto si lo son tanto "
+"para la dirección de red como para la dirección de transmisión."
+
+#: ../Doc/library/ipaddress.rst:513
+msgid ""
+"The network address for the network. The network address and the prefix "
+"length together uniquely define a network."
+msgstr ""
+"La dirección de red de la red. La dirección de red y la longitud del prefijo "
+"juntos definen de forma única una red."
+
+#: ../Doc/library/ipaddress.rst:518
+msgid ""
+"The broadcast address for the network. Packets sent to the broadcast address "
+"should be received by every host on the network."
+msgstr ""
+"La dirección de transmisión de la red. Todos los hosts de la red deben "
+"recibir los paquetes enviados a la dirección de transmisión."
+
+#: ../Doc/library/ipaddress.rst:523
+msgid "The host mask, as an :class:`IPv4Address` object."
+msgstr "La máscara de host, como un objeto :class:`IPv4Address`."
+
+#: ../Doc/library/ipaddress.rst:527
+msgid "The net mask, as an :class:`IPv4Address` object."
+msgstr "La máscara de red, como un objeto :class:`IPv4Address`."
+
+#: ../Doc/library/ipaddress.rst:533
+msgid ""
+"A string representation of the network, with the mask in prefix notation."
+msgstr ""
+"Una representación de cadena de la red, con la máscara en notación de "
+"prefijo."
+
+#: ../Doc/library/ipaddress.rst:536
+msgid ""
+"``with_prefixlen`` and ``compressed`` are always the same as "
+"``str(network)``. ``exploded`` uses the exploded form the network address."
+msgstr ""
+"``with_prefixlen`` y ``compressed`` son siempre lo mismo que ``str(red)``. "
+"``exploded`` utiliza la forma explosionada de la dirección de red."
+
+#: ../Doc/library/ipaddress.rst:542
+msgid ""
+"A string representation of the network, with the mask in net mask notation."
+msgstr ""
+"Una representación de cadena de la red, con la máscara en notación de "
+"máscara de red."
+
+#: ../Doc/library/ipaddress.rst:547
+msgid ""
+"A string representation of the network, with the mask in host mask notation."
+msgstr ""
+"Una representación de cadena de la red, con la máscara en notación de "
+"máscara de host."
+
+#: ../Doc/library/ipaddress.rst:552
+msgid "The total number of addresses in the network."
+msgstr "El número total de direcciones en la red."
+
+#: ../Doc/library/ipaddress.rst:556
+msgid "Length of the network prefix, in bits."
+msgstr "Longitud del prefijo de red, en bits."
+
+#: ../Doc/library/ipaddress.rst:560
+msgid ""
+"Returns an iterator over the usable hosts in the network.  The usable hosts "
+"are all the IP addresses that belong to the network, except the network "
+"address itself and the network broadcast address.  For networks with a mask "
+"length of 31, the network address and network broadcast address are also "
+"included in the result. Networks with a mask of 32 will return a list "
+"containing the single host address."
+msgstr ""
+"Longitud de Devuelve un iterador sobre los hosts utilizables en la red. Los "
+"hosts utilizables son todas las direcciones IP que pertenecen a la red, "
+"excepto la dirección de red en sí y la dirección de transmisión de la red. "
+"Para redes con una longitud de máscara de 31, la dirección de red y la "
+"dirección de transmisión de red también se incluyen en el resultado. Las "
+"redes con una máscara de 32 devolverán una lista que contiene la dirección "
+"de host única, el prefijo de red, en bits."
+
+#: ../Doc/library/ipaddress.rst:578
+msgid ""
+"``True`` if this network is partly or wholly contained in *other* or *other* "
+"is wholly contained in this network."
+msgstr ""
+"``True`` si esta red está total o parcialmente contenida en *other* o "
+"*other* está completamente contenido en esta red."
+
+#: ../Doc/library/ipaddress.rst:583
+msgid ""
+"Computes the network definitions resulting from removing the given *network* "
+"from this one.  Returns an iterator of network objects. Raises :exc:"
+"`ValueError` if *network* is not completely contained in this network."
+msgstr ""
+"Calcula las definiciones de red resultantes de eliminar la *network* dada de "
+"esta. Devuelve un iterador de objetos de red. Genera :exc:`ValueError` si "
+"*network* no está completamente contenido en esta red."
+
+#: ../Doc/library/ipaddress.rst:596
+msgid ""
+"The subnets that join to make the current network definition, depending on "
+"the argument values.  *prefixlen_diff* is the amount our prefix length "
+"should be increased by.  *new_prefix* is the desired new prefix of the "
+"subnets; it must be larger than our prefix.  One and only one of "
+"*prefixlen_diff* and *new_prefix* must be set.  Returns an iterator of "
+"network objects."
+msgstr ""
+"Las subredes que se unen para crear la definición de red actual, según los "
+"valores de los argumentos. *prefixlen_diff* es la cantidad en la que se debe "
+"aumentar la longitud de nuestro prefijo. *new_prefix* es el nuevo prefijo "
+"deseado de las subredes; debe ser más grande que nuestro prefijo. Se debe "
+"establecer uno y solo uno de *prefixlen_diff* y *new_prefix*. Devuelve un "
+"iterador de objetos de red."
+
+#: ../Doc/library/ipaddress.rst:621
+msgid ""
+"The supernet containing this network definition, depending on the argument "
+"values.  *prefixlen_diff* is the amount our prefix length should be "
+"decreased by.  *new_prefix* is the desired new prefix of the supernet; it "
+"must be smaller than our prefix.  One and only one of *prefixlen_diff* and "
+"*new_prefix* must be set.  Returns a single network object."
+msgstr ""
+"La superred que contiene esta definición de red, según los valores de los "
+"argumentos. *prefixlen_diff* es la cantidad en la que se debe reducir la "
+"longitud de nuestro prefijo. *new_prefix* es el nuevo prefijo deseado de la "
+"superred; debe ser más pequeño que nuestro prefijo. Se debe establecer uno y "
+"solo uno de *prefixlen_diff* y *new_prefix*. Devuelve un solo objeto de red."
+
+#: ../Doc/library/ipaddress.rst:637
+msgid "Return ``True`` if this network is a subnet of *other*."
+msgstr "Devuelve ``True`` si esta red es una subred de *other*."
+
+#: ../Doc/library/ipaddress.rst:648
+msgid "Return ``True`` if this network is a supernet of *other*."
+msgstr "Devuelve ``True`` si esta red es una superred de *other*."
+
+#: ../Doc/library/ipaddress.rst:659
+msgid ""
+"Compare this network to *other*.  In this comparison only the network "
+"addresses are considered; host bits aren't.  Returns either ``-1``, ``0`` or "
+"``1``."
+msgstr ""
+"Compare esta red con *other*. En esta comparación solo se consideran las "
+"direcciones de red; los bits de host no lo son. Devuelve ``-1``, ``0`` o "
+"``1``."
+
+#: ../Doc/library/ipaddress.rst:670
+msgid ""
+"It uses the same ordering and comparison algorithm as \"<\", \"==\", and "
+"\">\""
+msgstr ""
+"Utiliza el mismo algoritmo de ordenación y comparación que \"<\", \"==\" y "
+"\">\""
+
+#: ../Doc/library/ipaddress.rst:676
+msgid ""
+"Construct an IPv6 network definition.  *address* can be one of the following:"
+msgstr ""
+"Construya una definición de red IPv6. *address* puede ser una de las "
+"siguientes:"
+
+#: ../Doc/library/ipaddress.rst:678
+msgid ""
+"A string consisting of an IP address and an optional prefix length, "
+"separated by a slash (``/``).  The IP address is the network address, and "
+"the prefix length must be a single number, the *prefix*.  If no prefix "
+"length is provided, it's considered to be ``/128``."
+msgstr ""
+"Una cadena que consta de una dirección IP y una longitud de prefijo "
+"opcional, separados por una barra (``/``). La dirección IP es la dirección "
+"de red y la longitud del prefijo debe ser un solo número, el *prefix*. Si no "
+"se proporciona una longitud de prefijo, se considera que es ``/128``."
+
+#: ../Doc/library/ipaddress.rst:683
+msgid ""
+"Note that currently expanded netmasks are not supported.  That means ``2001:"
+"db00::0/24`` is a valid argument while ``2001:db00::0/ffff:ff00::`` is not."
+msgstr ""
+"Tenga en cuenta que las máscaras de red expandidas actualmente no son "
+"compatibles. Eso significa que ``2001:db00::0/24`` es un argumento válido "
+"mientras que ``2001:db00::0/ffff:ff00::`` no lo es."
+
+#: ../Doc/library/ipaddress.rst:687
+msgid ""
+"An integer that fits into 128 bits.  This is equivalent to a single-address "
+"network, with the network address being *address* and the mask being "
+"``/128``."
+msgstr ""
+"Un número entero que cabe en 128 bits. Esto es equivalente a una red de una "
+"sola dirección, con la dirección de red *address* y la máscara ``/128``."
+
+#: ../Doc/library/ipaddress.rst:691
+msgid ""
+"An integer packed into a :class:`bytes` object of length 16, big-endian. The "
+"interpretation is similar to an integer *address*."
+msgstr ""
+"Un entero empaquetado en un objeto :class:`bytes` de longitud 16, big-"
+"endian. La interpretación es similar a una *address* entera."
+
+#: ../Doc/library/ipaddress.rst:694
+msgid ""
+"A two-tuple of an address description and a netmask, where the address "
+"description is either a string, a 128-bits integer, a 16-bytes packed "
+"integer, or an existing IPv6Address object; and the netmask is an integer "
+"representing the prefix length."
+msgstr ""
+"Dos tuplas de una descripción de dirección y una máscara de red, donde la "
+"descripción de la dirección es una cadena, un entero de 128 bits, un entero "
+"empaquetado de 16 bytes o un objeto IPv6Address existente; y la máscara de "
+"red es un número entero que representa la longitud del prefijo."
+
+#: ../Doc/library/ipaddress.rst:699
+msgid ""
+"An :exc:`AddressValueError` is raised if *address* is not a valid IPv6 "
+"address.  A :exc:`NetmaskValueError` is raised if the mask is not valid for "
+"an IPv6 address."
+msgstr ""
+"Se genera un :exc:`AddressValueError` si *address* no es una dirección IPv6 "
+"válida. A :exc:`NetmaskValueError` se genera si la máscara no es válida para "
+"una dirección IPv6."
+
+#: ../Doc/library/ipaddress.rst:732
+msgid ""
+"Returns an iterator over the usable hosts in the network.  The usable hosts "
+"are all the IP addresses that belong to the network, except the Subnet-"
+"Router anycast address.  For networks with a mask length of 127, the Subnet-"
+"Router anycast address is also included in the result. Networks with a mask "
+"of 128 will return a list containing the single host address."
+msgstr ""
+"Devuelve un iterador sobre los hosts utilizables en la red. Los hosts "
+"utilizables son todas las direcciones IP que pertenecen a la red, excepto la "
+"dirección Anycast del Subnet-Router. Para redes con una longitud de máscara "
+"de 127, la dirección anycast del Subnet-Router también se incluye en el "
+"resultado. Las redes con una máscara de 128 devolverán una lista que "
+"contiene la única dirección de host."
+
+#: ../Doc/library/ipaddress.rst:747
+msgid ""
+"Refer to the corresponding attribute documentation in :class:`IPv4Network`."
+msgstr ""
+"Consulte la documentación del atributo correspondiente en :class:"
+"`IPv4Network`."
+
+#: ../Doc/library/ipaddress.rst:752
+msgid ""
+"These attribute is true for the network as a whole if it is true for both "
+"the network address and the broadcast address."
+msgstr ""
+"Este atributo es verdadero para la red en su conjunto si es cierto tanto "
+"para la dirección de red como para la dirección de transmisión."
+
+#: ../Doc/library/ipaddress.rst:759
+msgid ""
+"Network objects support some operators.  Unless stated otherwise, operators "
+"can only be applied between compatible objects (i.e. IPv4 with IPv4, IPv6 "
+"with IPv6)."
+msgstr ""
+"Este atributo es verdadero para la red en su conjunto si es cierto para "
+"ambos objetos de red que admiten algunos operadores. A menos que se indique "
+"lo contrario, los operadores solo se pueden aplicar entre objetos "
+"compatibles (es decir, IPv4 con IPv4, IPv6 con IPv6)."
+
+#: ../Doc/library/ipaddress.rst:765 ../Doc/library/ipaddress.rst:901
+msgid "Logical operators"
+msgstr "Operadores lógicos"
+
+#: ../Doc/library/ipaddress.rst:767
+msgid ""
+"Network objects can be compared with the usual set of logical operators. "
+"Network objects are ordered first by network address, then by net mask."
+msgstr ""
+"Los objetos de red se pueden comparar con el conjunto habitual de operadores "
+"lógicos. Los objetos de red se ordenan primero por dirección de red y luego "
+"por máscara de red."
+
+#: ../Doc/library/ipaddress.rst:772
+msgid "Iteration"
+msgstr "Iteración"
+
+#: ../Doc/library/ipaddress.rst:774
+msgid ""
+"Network objects can be iterated to list all the addresses belonging to the "
+"network.  For iteration, *all* hosts are returned, including unusable hosts "
+"(for usable hosts, use the :meth:`~IPv4Network.hosts` method).  An example::"
+msgstr ""
+"Los objetos de red se pueden iterar para enumerar todas las direcciones que "
+"pertenecen a la red. Para la iteración, se devuelven *todos* los hosts, "
+"incluidos los hosts inutilizables (para hosts utilizables, use el método :"
+"meth:`~IPv4Network.hosts`). Un ejemplo::"
+
+#: ../Doc/library/ipaddress.rst:801
+msgid "Networks as containers of addresses"
+msgstr "Redes como contenedores de direcciones"
+
+#: ../Doc/library/ipaddress.rst:803
+msgid "Network objects can act as containers of addresses.  Some examples::"
+msgstr ""
+"Los objetos de red pueden actuar como contenedores de direcciones. Algunos "
+"ejemplos::"
+
+#: ../Doc/library/ipaddress.rst:816
+msgid "Interface objects"
+msgstr "Objetos de interfaz"
+
+#: ../Doc/library/ipaddress.rst:818
+msgid ""
+"Interface objects are :term:`hashable`, so they can be used as keys in "
+"dictionaries."
+msgstr ""
+"Los objetos de interfaz son :term:`hashable`, por lo que se pueden usar como "
+"claves en diccionarios."
+
+#: ../Doc/library/ipaddress.rst:823
+msgid ""
+"Construct an IPv4 interface.  The meaning of *address* is as in the "
+"constructor of :class:`IPv4Network`, except that arbitrary host addresses "
+"are always accepted."
+msgstr ""
+"Construya una interfaz IPv4. El significado de *address* es como en el "
+"constructor de :class:`IPv4Network`, excepto que siempre se aceptan "
+"direcciones de host arbitrarias."
+
+#: ../Doc/library/ipaddress.rst:827
+msgid ""
+":class:`IPv4Interface` is a subclass of :class:`IPv4Address`, so it inherits "
+"all the attributes from that class.  In addition, the following attributes "
+"are available:"
+msgstr ""
+":class:`IPv4Interface` es una subclase de :class:`IPv4Address`, por lo que "
+"hereda todos los atributos de esa clase. Además, están disponibles los "
+"siguientes atributos:"
+
+#: ../Doc/library/ipaddress.rst:833
+msgid "The address (:class:`IPv4Address`) without network information."
+msgstr "The address (:class:`IPv4Address`) without network information."
+
+#: ../Doc/library/ipaddress.rst:841
+msgid "The network (:class:`IPv4Network`) this interface belongs to."
+msgstr "La red (:class:`IPv4Network`) a la que pertenece esta interfaz."
+
+#: ../Doc/library/ipaddress.rst:849
+msgid ""
+"A string representation of the interface with the mask in prefix notation."
+msgstr ""
+"Una representación de cadena de la interfaz con la máscara en notación de "
+"prefijo."
+
+#: ../Doc/library/ipaddress.rst:857
+msgid ""
+"A string representation of the interface with the network as a net mask."
+msgstr ""
+"Una representación de cadena de la interfaz con la red como máscara de red."
+
+#: ../Doc/library/ipaddress.rst:865
+msgid ""
+"A string representation of the interface with the network as a host mask."
+msgstr ""
+"Una representación de cadena de la interfaz con la red como máscara de host."
+
+#: ../Doc/library/ipaddress.rst:874
+msgid ""
+"Construct an IPv6 interface.  The meaning of *address* is as in the "
+"constructor of :class:`IPv6Network`, except that arbitrary host addresses "
+"are always accepted."
+msgstr ""
+"Construya una interfaz IPv6. El significado de *address* es como en el "
+"constructor de :class:`IPv6Network`, excepto que siempre se aceptan "
+"direcciones de host arbitrarias."
+
+#: ../Doc/library/ipaddress.rst:878
+msgid ""
+":class:`IPv6Interface` is a subclass of :class:`IPv6Address`, so it inherits "
+"all the attributes from that class.  In addition, the following attributes "
+"are available:"
+msgstr ""
+":class:`IPv6Interface` es una subclase de :class:`IPv6Address`, por lo que "
+"hereda todos los atributos de esa clase. Además, están disponibles los "
+"siguientes atributos:"
+
+#: ../Doc/library/ipaddress.rst:888
+msgid ""
+"Refer to the corresponding attribute documentation in :class:`IPv4Interface`."
+msgstr ""
+"Consulte la documentación del atributo correspondiente en :class:"
+"`IPv4Interface`."
+
+#: ../Doc/library/ipaddress.rst:895
+msgid ""
+"Interface objects support some operators.  Unless stated otherwise, "
+"operators can only be applied between compatible objects (i.e. IPv4 with "
+"IPv4, IPv6 with IPv6)."
+msgstr ""
+"Los objetos de interfaz admiten algunos operadores. A menos que se indique "
+"lo contrario, los operadores solo se pueden aplicar entre objetos "
+"compatibles (es decir, IPv4 con IPv4, IPv6 con IPv6)."
+
+#: ../Doc/library/ipaddress.rst:903
+msgid ""
+"Interface objects can be compared with the usual set of logical operators."
+msgstr ""
+"Los objetos de interfaz se pueden comparar con el conjunto habitual de "
+"operadores lógicos."
+
+#: ../Doc/library/ipaddress.rst:905
+msgid ""
+"For equality comparison (``==`` and ``!=``), both the IP address and network "
+"must be the same for the objects to be equal.  An interface will not compare "
+"equal to any address or network object."
+msgstr ""
+"Para la comparación de igualdad (``==`` y ``!=``), Tanto la dirección IP "
+"como la red deben ser iguales para que los objetos sean iguales. Una "
+"interfaz no se comparará con ninguna dirección u objeto de red."
+
+#: ../Doc/library/ipaddress.rst:909
+msgid ""
+"For ordering (``<``, ``>``, etc) the rules are different.  Interface and "
+"address objects with the same IP version can be compared, and the address "
+"objects will always sort before the interface objects.  Two interface "
+"objects are first compared by their networks and, if those are the same, "
+"then by their IP addresses."
+msgstr ""
+"Para ordenar (``<``, ``>``, etc) las reglas son diferentes. Los objetos de "
+"interfaz y dirección con la misma versión de IP se pueden comparar, y los "
+"objetos de dirección siempre se clasificarán antes que los objetos de "
+"interfaz. Primero se comparan dos objetos de interfaz por sus redes y, si "
+"son iguales, luego por sus direcciones IP."
+
+#: ../Doc/library/ipaddress.rst:917
+msgid "Other Module Level Functions"
+msgstr "Otras funciones de nivel de módulo"
+
+#: ../Doc/library/ipaddress.rst:919
+msgid "The module also provides the following module level functions:"
+msgstr ""
+"El módulo también proporciona las siguientes funciones de nivel de módulo:"
+
+#: ../Doc/library/ipaddress.rst:923
+msgid ""
+"Represent an address as 4 packed bytes in network (big-endian) order. "
+"*address* is an integer representation of an IPv4 IP address.  A :exc:"
+"`ValueError` is raised if the integer is negative or too large to be an IPv4 "
+"IP address."
+msgstr ""
+"Represente una dirección como 4 bytes empaquetados en orden de red (big-"
+"endian). *address* es una representación entera de una dirección IP IPv4. A :"
+"exc:`ValueError` se genera si el número entero es negativo o demasiado "
+"grande para ser una dirección IP IPv4."
+
+#: ../Doc/library/ipaddress.rst:936
+msgid ""
+"Represent an address as 16 packed bytes in network (big-endian) order. "
+"*address* is an integer representation of an IPv6 IP address.  A :exc:"
+"`ValueError` is raised if the integer is negative or too large to be an IPv6 "
+"IP address."
+msgstr ""
+"Representa una dirección como 16 bytes empaquetados en orden de red (big-"
+"endian). *address* es una representación entera de una dirección IP IPv6. A :"
+"exc:`ValueError` se genera si el número entero es negativo o demasiado "
+"grande para ser una dirección IP IPv6."
+
+#: ../Doc/library/ipaddress.rst:944
+msgid ""
+"Return an iterator of the summarized network range given the first and last "
+"IP addresses.  *first* is the first :class:`IPv4Address` or :class:"
+"`IPv6Address` in the range and *last* is the last :class:`IPv4Address` or :"
+"class:`IPv6Address` in the range.  A :exc:`TypeError` is raised if *first* "
+"or *last* are not IP addresses or are not of the same version.  A :exc:"
+"`ValueError` is raised if *last* is not greater than *first* or if *first* "
+"address version is not 4 or 6."
+msgstr ""
+"Devuelve un iterador del rango de red resumido dadas la primera y la última "
+"dirección IP. *first* es el primero :class:`IPv4Address` o :class:"
+"`IPv6Address` en el rango y *last* es el último :class:`IPv4Address` o :"
+"class:`IPv6Address` en el rango. A :exc:`TypeError` se genera si *first* o "
+"*last* no son direcciones IP o no son de la misma versión. A :exc:"
+"`ValueError` se genera si *last* no es mayor que *first* o si la *first* "
+"versión de la dirección no es 4 o 6."
+
+#: ../Doc/library/ipaddress.rst:960
+msgid ""
+"Return an iterator of the collapsed :class:`IPv4Network` or :class:"
+"`IPv6Network` objects.  *addresses* is an iterator of :class:`IPv4Network` "
+"or :class:`IPv6Network` objects.  A :exc:`TypeError` is raised if "
+"*addresses* contains mixed version objects."
+msgstr ""
+"Devuelve un iterador de los objetos contraídos :class:`IPv4Network` o :class:"
+"`IPv6Network`. *addresses* es un iterador de :class:`IPv4Network`  objetos :"
+"class:`IPv6Network`. A :exc:`TypeError` se genera si *addresses* contiene "
+"objetos de versión mixta."
+
+#: ../Doc/library/ipaddress.rst:973
+msgid ""
+"Return a key suitable for sorting between networks and addresses.  Address "
+"and Network objects are not sortable by default; they're fundamentally "
+"different, so the expression::"
+msgstr ""
+"Devuelve una clave adecuada para clasificar entre redes y direcciones. Los "
+"objetos de dirección y red no se pueden ordenar de forma predeterminada; son "
+"fundamentalmente diferentes, por lo que la expresión ::"
+
+#: ../Doc/library/ipaddress.rst:979
+msgid ""
+"doesn't make sense.  There are some times however, where you may wish to "
+"have :mod:`ipaddress` sort these anyway.  If you need to do this, you can "
+"use this function as the *key* argument to :func:`sorted()`."
+msgstr ""
+"no tiene sentido. Sin embargo, hay ocasiones en las que es posible que desee "
+"que :mod:`ipaddress` ordene estos de todos modos. Si necesita hacer esto, "
+"puede usar esta función como el argumento *key* para :func:`sorted()`."
+
+#: ../Doc/library/ipaddress.rst:983
+msgid "*obj* is either a network or address object."
+msgstr "*obj* es un objeto de red o de dirección."
+
+#: ../Doc/library/ipaddress.rst:987
+msgid "Custom Exceptions"
+msgstr "Excepciones personalizadas"
+
+#: ../Doc/library/ipaddress.rst:989
+msgid ""
+"To support more specific error reporting from class constructors, the module "
+"defines the following exceptions:"
+msgstr ""
+"Para admitir informes de errores más específicos de los constructores de "
+"clases, el módulo define las siguientes excepciones:"
+
+#: ../Doc/library/ipaddress.rst:994
+msgid "Any value error related to the address."
+msgstr "Cualquier error de valor relacionado con la dirección."
+
+#: ../Doc/library/ipaddress.rst:999
+msgid "Any value error related to the net mask."
+msgstr "Cualquier error de valor relacionado con la máscara de red."
